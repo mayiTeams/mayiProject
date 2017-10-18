@@ -32,18 +32,15 @@
     </div>
     <div class="infotitle">个人信息</div>
     <div class="info">
-        <div class="info1">账号:&nbsp;&nbsp;--------------------------------修改</div>
-        <div class="info1">姓名:&nbsp;&nbsp;--------------------------------修改</div>
+        <div class="info1">账号:&nbsp;&nbsp;${user.getUsername()}</div>
+        <div class="info1">姓名:&nbsp;&nbsp;${user.getUsername()}</div>
         <div class="info1">性别:&nbsp;&nbsp;--------------------------------修改</div>
         <div class="info1">年龄:&nbsp;&nbsp;--------------------------------修改</div>
         <div class="info1">联系电话:&nbsp;&nbsp;----------------------------修改</div>
         <div class="info1">电子邮箱:&nbsp;&nbsp;----------------------------修改</div>
         <div class="info1">地址:</div>
-        <div class="info1">余额:</div>
-        <div class="click"><a href="">点击查看个人信息</a></div>
-        <div class="button">
-            <button>保存</button>
-        </div>
+        <div class="info1">余额:${user.getBalance()}</div>
+       
     </div>
     <div class="ewm"><img src="images/ewm.png"></div>
     <div class="foot">Copyright&copy;蚂蚁小分队版权所有</div>
