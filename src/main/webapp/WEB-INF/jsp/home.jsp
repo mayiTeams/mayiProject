@@ -102,7 +102,7 @@
 <body>
     <div>
         <div class="tag"><img id="img-1" src="images/1.png" alt=""><a href="">宜信官网</a>
-            <img id="img-2" src="images/2.png" alt=""><span class="tag-1">xxx-xxx-xx</span><span class="tag-2">欢迎您，xxx <a href="">&nbsp; &nbsp;退出</a></span></div>
+            <img id="img-2" src="images/2.png" alt=""><span class="tag-1">xxx-xxx-xx</span><span class="tag-2">欢迎您，${user.getUsername()} <a href="">&nbsp; &nbsp;退出</a></span></div>
         <div class="header">
             <img src="images/logo.png"> 宜人贷理财账户管理系统
         </div>
@@ -111,7 +111,7 @@
         <div class="left-menu">
             <div class="infor">
                 <div class="menu"><a href="user-info.jsp">基本信息</a></div>
-                <div class="menu"><a href="rechargeAndWithdrow.jsp">充值提现</a></div>
+                <div class="menu"><a href="rechargeAndWithdrow">充值提现</a></div>
                 <div class="menu"><a href="payment.jsp">支付单</a></div>
                 <div class="menu"><a href="fund-flow.jsp">资金流水</a></div>
                 <div class="menu"><a href="risk-investment-analyse.jsp">投资风险等级测评</a></div>
