@@ -8,10 +8,11 @@
 		<action name="gologin" class="userAction" method="none">
 			<result name="succeed">/WEB-INF/jsp/login.jsp</result>
 		</action>
-		<action name="goRegister" class="UserRegister" method="">
-			<result name="succeed">/WEB-INF/jsp/home.jsp</result>
-			<result name="false">/WEB-INF/jsp/register.jsp</result>
+		<!-- 跳转到注册页面 -->
+		<action name="goRegister" class="userAction" method="skip">
+			<result name="succeed">/WEB-INF/jsp/register.jsp</result>
 		</action>
+
 		<action name="login" class="userAction" method="login">
 			<result name="succeed">/WEB-INF/jsp/home.jsp</result>
 			<result name="false">/WEB-INF/jsp/login.jsp</result>
@@ -33,6 +34,15 @@
 		</action>
 		<action name="withdrowMoney" class="userAction" method="withdrow">
 			<result name="succeed">/WEB-INF/jsp/home.jsp</result>
+		</action>
+		<action name="user-info" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/user-info.jsp</result>
+		</action>
+
+		<!-- 注册验证：如果已经存在，不能跳转，否则跳转 -->
+		<action name="register" class="userAction" method="register">
+			<result name="false">/WEB-INF/jsp/registerFalse.jsp</result>
+			<result name="succeed">/WEB-INF/jsp/login.jsp</result>
 		</action>
 	</package>
 </struts>

@@ -18,7 +18,7 @@ public class User {
 	private String password;
 	private String balance;
 	private short sex;
-
+		
 	public Long getId() {
 		return id;
 	}

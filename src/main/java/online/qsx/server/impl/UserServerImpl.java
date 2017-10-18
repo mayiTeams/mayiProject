@@ -27,6 +27,13 @@ public class UserServerImpl {
 	 * @param user
 	 */
 	public void saveUser(User user) {
+		List<User> list = userDaoImpl.getUsers();
+		for (User us : list) {
+			if (us.getUsername().trim().equals(user.getUsername())
+					&& us.getPassword().trim().equals(user.getPassword())) {
+
+			}
+		}
 		userDaoImpl.saveUser(user);
 	}
 
@@ -105,5 +112,23 @@ public class UserServerImpl {
 			}
 		}
 		return null;
+	}
+
+	/**
+	 * 注册
+	 * 
+	 * @return
+	 */
+	public int register(User user) {
+		List<User> list = userDaoImpl.getUsers();
+		for (User us : list) {
+			if (us.getUsername().trim().equals(user.getUsername())) {
+				System.out.println("用户已存在！");
+				return -1;
+			} else {
+				userDaoImpl.register(user);
+			}
+		}
+		return 0;
 	}
 }

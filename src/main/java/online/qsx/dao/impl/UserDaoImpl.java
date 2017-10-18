@@ -17,7 +17,7 @@ public class UserDaoImpl {
 	public List<User> getUsers() {
 		return (List<User>) baseDao.getHibernateTemplate().find("from User");
 	}
-	
+
 	public void saveUser(User user) {
 		baseDao.getHibernateTemplate().save(new User(user.getUsername(), user.getPassword(), user.getBalance()));
 
@@ -29,7 +29,6 @@ public class UserDaoImpl {
 
 	}
 
-	@SuppressWarnings("unchecked")
 	public User getUser(User user) {
 		return baseDao.getHibernateTemplate().get(User.class, user.getId());
 	}
@@ -37,5 +36,16 @@ public class UserDaoImpl {
 	public void updateBalance(User user, String balance) {
 		baseDao.getHibernateTemplate()
 				.saveOrUpdate(new User(user.getId(), user.getUsername(), user.getPassword(), balance));
+	}
+
+	public void updateUserInfo(User user) {
+		baseDao.getHibernateTemplate().saveOrUpdate(user);
+	}
+
+	/**
+	 * 注册
+	 */
+	public void register(User user) {
+		baseDao.getHibernateTemplate().save(user);
 	}
 }

@@ -19,6 +19,7 @@
 			<div class="center"></div>
 			<div class="logo"></div>
 			<div class="head">
+
 				<h1>用户注册</h1>
 			</div>
 			<div class="name">
@@ -28,6 +29,9 @@
 			<div class="password">
 				登&nbsp;陆&nbsp;密&nbsp;码&nbsp;:&nbsp; <input type="password"
 					name="user.password" id="password" placeholder="请输入您的密码！">
+			</div>
+			<div>
+				<h1>你输入的用户名已经存在，请重新输入！</h1>
 			</div>
 
 			<div class="btn1">
