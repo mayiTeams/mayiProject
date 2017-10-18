@@ -30,5 +30,8 @@
 		<action name="withdrowMoney" class="userAction" method="withdrow">
 			<result name="succeed">/WEB-INF/jsp/home.jsp</result>
 		</action>
+		<action name="user-info" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/user-info.jsp</result>
+		</action>
 	</package>
 </struts>
