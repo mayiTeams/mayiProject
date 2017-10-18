@@ -18,9 +18,7 @@ public class UserServerImpl {
 	 * 获取所有用户
 	 */
 	public List<User> getUsers() {
-
 		return userDaoImpl.getUsers();
-
 	}
 
 	/**
@@ -30,7 +28,6 @@ public class UserServerImpl {
 	 */
 	public void saveUser(User user) {
 		userDaoImpl.saveUser(user);
-
 	}
 
 	/**
@@ -45,11 +42,8 @@ public class UserServerImpl {
 					&& us.getPassword().trim().equals(user.getPassword())) {
 				return "true";
 			}
-
 		}
-
 		return "false";
-
 	}
 
 	/**
@@ -88,15 +82,15 @@ public class UserServerImpl {
 		System.out.println("提现的钱：" + getBalance);
 		Double accoutnBalnce = Double.parseDouble(balance);
 		System.out.println("账户的钱" + accoutnBalnce);
-		if(accoutnBalnce>getBalance){
-		Double allBalance = accoutnBalnce - getBalance;
-		System.out.println("剩余的钱：" + allBalance);
-		String allBalance01 = Double.toString(allBalance);
-		userDaoImpl.updateBalance(user, allBalance01);
-		}else{
+		if (accoutnBalnce > getBalance) {
+			Double allBalance = accoutnBalnce - getBalance;
+			System.out.println("剩余的钱：" + allBalance);
+			String allBalance01 = Double.toString(allBalance);
+			userDaoImpl.updateBalance(user, allBalance01);
+		} else {
 			userDaoImpl.updateBalance(user, balance);
 		}
-  
+
 	}
 
 	/**

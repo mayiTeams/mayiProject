@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <form onsubmit="return judge()">
+    <form onsubmit="return judge()" name="registerFrom"  method="post" action="login.action">>
         <div class="main">
             <div class="center"></div>
             <div class="logo"></div>

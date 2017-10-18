@@ -5,8 +5,12 @@
 
 <struts>
 	<package name="default" namespace="/" extends="struts-default">
-	<action name="gologin" class="userAction" method="none">
+		<action name="gologin" class="userAction" method="none">
 			<result name="succeed">/WEB-INF/jsp/login.jsp</result>
+		</action>
+		<action name="goRegister" class="UserRegister" method="">
+			<result name="succeed">/WEB-INF/jsp/home.jsp</result>
+			<result name="false">/WEB-INF/jsp/register.jsp</result>
 		</action>
 		<action name="login" class="userAction" method="login">
 			<result name="succeed">/WEB-INF/jsp/home.jsp</result>

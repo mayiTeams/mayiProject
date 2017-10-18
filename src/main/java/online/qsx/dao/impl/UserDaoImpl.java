@@ -17,9 +17,15 @@ public class UserDaoImpl {
 	public List<User> getUsers() {
 		return (List<User>) baseDao.getHibernateTemplate().find("from User");
 	}
-
+	
 	public void saveUser(User user) {
 		baseDao.getHibernateTemplate().save(new User(user.getUsername(), user.getPassword(), user.getBalance()));
+
+	}
+
+	public void saveUserInfo(User user) {
+		baseDao.getHibernateTemplate()
+				.save(new User(user.getUsername(), user.getPassword(), user.getBalance(), user.getSex()));
 
 	}
 
