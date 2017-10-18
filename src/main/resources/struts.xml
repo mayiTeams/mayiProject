@@ -5,22 +5,12 @@
 
 <struts>
 	<package name="default" namespace="/" extends="struts-default">
+	<action name="gologin" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/login.jsp</result>
+		</action>
 		<action name="login" class="userAction" method="login">
 			<result name="succeed">/WEB-INF/jsp/home.jsp</result>
 			<result name="false">/WEB-INF/jsp/login.jsp</result>
-		</action>
-
-		<action name="save" class="userAction" method="none">
-			<result name="succeed">/WEB-INF/jsp/save.jsp</result>
-		</action>
-
-		<!-- 新增用户 -->
-		<action name="saveUser" class="userAction" method="save">
-			<result name="succeed">/WEB-INF/jsp/list.jsp</result>
-		</action>
-
-		<action name="register" class="userAction" method="none">
-			<result name="succeed">/WEB-INF/jsp/register.jsp</result>
 		</action>
 		<action name="UserRegister" class="userAction" method="save">
 			<result name="succeed">/WEB-INF/jsp/list.jsp</result>

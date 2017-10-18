@@ -195,7 +195,7 @@
 <body>
     <div class="xd-hand">
         <div class="hand-1"><img src="img/a1.png"></div>
-        <div class="hand-2"><a href="login.jsp"> 登录 |</a> <a href="register.jsp" style="color: red;"> 快速注册 </a><a href="#">| 网贷知识普及</a></div>
+        <div class="hand-2"><a href="gologin"> 登录 |</a> <a href="register.jsp" style="color: red;"> 快速注册 </a><a href="#">| 网贷知识普及</a></div>
     </div>
     <div class="xd-two">
         <div class="two-1"><img src="img/b2.png"></div>
@@ -214,7 +214,7 @@
             <p style="font-size: 30px; "><b>安全&nbsp;  专业</b></p>
             <p style="font-size: 30px; ">宜信品牌 &nbsp; 品质保证</p>
             <div class="three-2"><a href="register.jsp">快速注册</a></div>
-            <p> 已有账号？<a href="login.jsp">立即登录</a></p>
+            <p> 已有账号？<a href="gologin">立即登录</a></p>
             <div class="three-3">网贷有风险，出借需谨慎！</div>
         </div>
     </div>
