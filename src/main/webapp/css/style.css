@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden
+}
+
+div a {
+    text-decoration: none;
+}
+
+.tag {
+    width: 100%;
+    height: 30px;
+    background-color: #f7f7f7;
+    line-height: 30px;
+}
+
+.header img {
+    vertical-align: middle;
+}
+
+#img-1 {
+    vertical-align: middle;
+    margin-left: 200px;
+}
+
+#img-2 {
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
+.menu {
+
+    margin: 30px;
+    color: yellow;
+}
+
+.header {
+    width: 100%;
+    height: 10%;
+    margin-left: 200px;
+    font-size: 30px;
+}
+
+.home {
+    width: 100%;
+    height: 40px;
+    background: #0098e0;
+    margin-top: 10px;
+}
+
+.left-menu {
+    width: 15%;
+    height: 800px;
+    margin-left: 250px;
+    background: #eee;
+    color: #666;
+    margin-top: 30px;
+    position: absolute;
+    border-radius: 15px;
+}
+
+.tag-1 {
+    color: #0298E5;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.tag-2 {
+    float: right;
+    margin-right: 200px;
+}
+
+.home a {
+    margin-left: 200px;
+    line-height: 40px;
+    color: #ffffff;
+}
+
+.infor a {
+    margin-top: 50px;
+    color: #767676;
+}
+
+.infor div:hover {
+    background: #0098e0;
+    color: white;
+}
+
+.right {
+    width: 800px;
+    height: 600px;
+    background: url(../images/bg.jpg); 
+     opacity: 0.6; 
+    margin-top: 30px;
+    margin-left: 33%;
+    border-radius: 20px;
+}
+
+.user {
+    width: 800px;
+    height: 20px;
+    padding-top: 50px;
+    padding-left: 200px;
+}
+
+.user_button {
+    width: 100px;
+    margin-left: 50px;
+}
