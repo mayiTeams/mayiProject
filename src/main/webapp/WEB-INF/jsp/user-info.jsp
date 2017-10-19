@@ -34,15 +34,15 @@
     <div class="infotitle">个人信息</div>
     
     <div class="info">
-        <div class="info1">账号:&nbsp;&nbsp;${temp.name }</div>
-        <div class="info1">姓名:&nbsp;&nbsp;${temp.name }</div>
-        <div class="info1">性别:&nbsp;&nbsp;</div>
+        <div class="info1">账号:&nbsp;&nbsp;${user.getUsername()}</div>
+        <div class="info1">姓名:&nbsp;&nbsp;${user.getUsername()}</div>
+        <div class="info1">性别:&nbsp;&nbsp;${user.getSex()}</div>
         <div class="info1">年龄:&nbsp;&nbsp;</div>
         <div class="info1">联系电话:&nbsp;&nbsp;</div>
         <div class="info1">电子邮箱:&nbsp;&nbsp;</div>
         <div class="info1">地址:</div>
         <div class="info1">余额:${user.getBalance()}</div>
-          <div class="click"><a href="update.jsp">修改信息</a></div>     
+          <div class="click"><a href="update">修改信息</a></div>     
     </div>
 
     <div class="ewm"><img src="images/ewm.png"></div>

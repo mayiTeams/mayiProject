@@ -23,6 +23,12 @@ public class UserDaoImpl {
 
 	}
 
+	public void saveUserInfo(User user) {
+		baseDao.getHibernateTemplate()
+				.save(new User(user.getUsername(), user.getPassword(), user.getBalance(), user.getSex()));
+
+	}
+
 	public User getUser(User user) {
 		return baseDao.getHibernateTemplate().get(User.class, user.getId());
 	}
@@ -35,4 +41,16 @@ public class UserDaoImpl {
 	public void edit(User user) {
 		baseDao.getHibernateTemplate().saveOrUpdate(user);
 	}
+
+	public void updateUserInfo(User user) {
+		baseDao.getHibernateTemplate().saveOrUpdate(user);
+	}
+
+	/**
+	 * 注册
+	 */
+	public void register(User user) {
+		baseDao.getHibernateTemplate().save(user);
+	}
+
 }

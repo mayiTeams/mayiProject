@@ -12,13 +12,13 @@
 	<input name="user.id" type="hidden"  value="${user.id }" />
 	<table>
 		<tr>
-			<td>age</td>
+			<td>姓名</td>
 			<td>
-				<input name="user.name" type="text" value="${user.name }"/>
+				<input name="user.username" type="text" value="${user.username }"/>
 			</td>
 		</tr>
 		<tr>
-			<td>name</td>
+			<td>余额</td>
 			<td>
 				<input name="user.balance" type="text" value="${user.balance }"/>
 			</td>

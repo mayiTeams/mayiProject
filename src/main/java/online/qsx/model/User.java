@@ -17,7 +17,8 @@ public class User {
 	private String username;
 	private String password;
 	private String balance;
-
+	private short sex;
+		
 	public Long getId() {
 		return id;
 	}
@@ -50,12 +51,38 @@ public class User {
 		this.balance = balance;
 	}
 
+	public short getSex() {
+	
+		return sex;
+	}
+
+	public void setSex(short sex) {
+		this.sex = sex;
+	}
+
 	public User(Long id, String username, String password, String balance) {
 		super();
 		this.id = id;
 		this.username = username;
 		this.password = password;
 		this.balance = balance;
+	}
+
+	public User(Long id, String username, String password, String balance, short sex) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.password = password;
+		this.balance = balance;
+		this.sex = sex;
+	}
+
+	public User(String username, String password, String balance, short sex) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.balance = balance;
+		this.sex = sex;
 	}
 
 	public User(String username, String password, String balance) {
@@ -82,7 +109,8 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", password=" + password + ", balance=" + balance + "]";
+		return "User [id=" + id + ", username=" + username + ", password=" + password + ", balance=" + balance
+				+ ", sex=" + sex + "]";
 	}
 
 }
