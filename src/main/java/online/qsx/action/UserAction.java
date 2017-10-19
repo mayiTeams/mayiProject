@@ -43,7 +43,6 @@ public class UserAction {
 	public String findUsers() {
 		list = userServerImpl.getUsers();
 		return "succeed";
-
 	}
 
 	public String save() {
@@ -53,7 +52,6 @@ public class UserAction {
 	}
 
 	public String none() {
-
 		return "succeed";
 	}
 
@@ -91,6 +89,17 @@ public class UserAction {
 		return "succeed";
 	}
 
+	public String to_edit() {
+		user=userServerImpl.getUser(user);
+		return "update";
+	}
+	
+	public String do_edit() {
+		userServerImpl.edit(user);
+		list = userServerImpl.getUsers();
+		return "list";
+	}
+
 	/**
 	 * 注册
 	 */
@@ -102,4 +111,5 @@ public class UserAction {
 			return "succeed";
 		}
 	}
+
 }

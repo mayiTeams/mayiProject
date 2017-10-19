@@ -38,6 +38,10 @@ public class UserDaoImpl {
 				.saveOrUpdate(new User(user.getId(), user.getUsername(), user.getPassword(), balance));
 	}
 
+	public void edit(User user) {
+		baseDao.getHibernateTemplate().saveOrUpdate(user);
+	}
+
 	public void updateUserInfo(User user) {
 		baseDao.getHibernateTemplate().saveOrUpdate(user);
 	}
@@ -48,4 +52,5 @@ public class UserDaoImpl {
 	public void register(User user) {
 		baseDao.getHibernateTemplate().save(user);
 	}
+
 }
