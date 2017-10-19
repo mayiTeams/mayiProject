@@ -23,7 +23,6 @@ public class UserDaoImpl {
 
 	}
 
-	@SuppressWarnings("unchecked")
 	public User getUser(User user) {
 		return baseDao.getHibernateTemplate().get(User.class, user.getId());
 	}
@@ -31,5 +30,9 @@ public class UserDaoImpl {
 	public void updateBalance(User user, String balance) {
 		baseDao.getHibernateTemplate()
 				.saveOrUpdate(new User(user.getId(), user.getUsername(), user.getPassword(), balance));
+	}
+
+	public void edit(User user) {
+		baseDao.getHibernateTemplate().saveOrUpdate(user);
 	}
 }

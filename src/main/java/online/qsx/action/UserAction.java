@@ -76,4 +76,12 @@ public class UserAction {
 		userServerImpl.withdrow(user, balance);
 		return "succeed";
 	}
+	
+	public String do_edit() {
+		userServerImpl.edit(user);
+		list = userServerImpl.getUsers();
+		return "list";
+	}
+	
+
 }

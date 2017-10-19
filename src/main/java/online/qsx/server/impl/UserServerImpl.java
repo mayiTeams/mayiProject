@@ -9,6 +9,7 @@ import online.qsx.common.BaseDao;
 import online.qsx.dao.impl.UserDaoImpl;
 import online.qsx.model.User;
 
+
 @Service
 public class UserServerImpl {
 	@Autowired
@@ -111,5 +112,9 @@ public class UserServerImpl {
 			}
 		}
 		return null;
+	}
+	
+	public void edit(User user) {
+		userDaoImpl.edit(user);
 	}
 }
