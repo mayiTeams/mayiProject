@@ -26,7 +26,8 @@
 				登&nbsp;陆&nbsp;密&nbsp;码&nbsp;:&nbsp; <input type="password"
 					name="user.password" id="password" placeholder="请输入您的密码！">
 			</div>
-			<hr>
+
+
 			<div class="btn1">
 				<button onclick="login()">登陆</button>
 			</div>
