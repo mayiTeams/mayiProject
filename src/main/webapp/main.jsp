@@ -208,13 +208,13 @@ a {
 		</div>
 		<div class="two-2">
 			<a href="#" style="color: #0096e0;">首页 &nbsp;&nbsp;&nbsp;</a> <a
-				href="toLend">我要出借 &nbsp;&nbsp;&nbsp;</a> <a href="toBorrow">我要借款
+				href="#">我要出借 &nbsp;&nbsp;&nbsp;</a> <a href="#">我要借款
 				&nbsp;&nbsp;&nbsp;</a> <a href="#">安全保障 &nbsp;&nbsp;&nbsp;</a> <a
 				href="#">出借人教育 &nbsp;&nbsp;&nbsp;</a> <a href="#">信息披露
 				&nbsp;&nbsp;&nbsp;</a>
 		</div>
 		<div class="two-3">
-			<a href="myAccount"><img src="img/4.png"></a>
+			<a href="#"><img src="img/4.png"></a>
 		</div>
 	</div>
 	<div class="xd-three">

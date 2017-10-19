@@ -12,7 +12,7 @@
 <body>
 	<div>
 		<div class="tag">
-			<img id="img-1" src="images/1.png" alt=""><a href="home-page">宜信官网</a> <img
+			<img id="img-1" src="images/1.png" alt=""><a href="">宜信官网</a> <img
 				id="img-2" src="images/2.png" alt=""><span class="tag-1">xxx-xxx-xx</span><span
 				class="tag-2">欢迎您，${user.getUsername()} <a href="home-page">&nbsp;
 					&nbsp;退出</a></span>
@@ -21,7 +21,7 @@
 			<img src="images/logo.png"> 宜人贷理财账户管理系统
 		</div>
 		<div class="home">
-			<a href="home-page">返回首页</a></span>
+			<a href="home-page">返回我的账户首页</a></span>
 		</div>
 		<div class="main">
 			<div class="left-menu">
@@ -51,7 +51,7 @@
 				method="post" onsubmit="return myFunction()">
 				<div class="right-infor">
 					<div class="inp">
-						请输入出借金额： <input id="in" class="inputsize" name="user.balance"
+						请输入提现金额： <input id="in" class="inputsize" name="user.balance"
 							type="text"> 元
 						<div style="margin-top: 20px">
 							<input type="submit" value="提交">
@@ -66,12 +66,12 @@
 	<script type="text/javascript">
 		function myFunction() {
 			var infor = $('#in').val();
-			var balance = ${user.getBalance()};
+			var balance = 2000;
 			if (infor > 0 && infor < balance) {
-				alert("提现成功！");
+				alert("提现成功");
 				return true;
 			} else {
-				alert("余额不足！")
+				alert("提现失败")
 				return false;
 			}
 		}
