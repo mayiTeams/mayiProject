@@ -12,11 +12,11 @@
 <body>
     <div>
         <div class="tag"><img id="img-1" src="images/1.png" alt=""><a href="">宜信官网</a>
-            <img id="img-2" src="images/2.png" alt=""><span class="tag-1">xxx-xxx-xx</span><span class="tag-2">欢迎您，xxx <a href="">&nbsp; &nbsp;退出</a></span></div>
+            <img id="img-2" src="images/2.png" alt=""><span class="tag-1">xxx-xxx-xx</span><span class="tag-2">欢迎您，${user.getUsername()}<a href="">&nbsp; &nbsp;退出</a></span></div>
         <div class="header">
             <img src="images/logo.png"> 宜人贷理财账户管理系统
         </div>
-        <div class="home"><a href="index.html">返回我的账户首页</a></span>
+        <div class="home"><a href="index.html">返回我的账户首页</a>
         </div>
         <div class="left-menu">
             <div class="infor">
@@ -30,31 +30,30 @@
         </div>
     </div>
     <div class="right">
-        <form>
-            <form>
+            <form onsubmit=" return myFunction()">
                 <div class="user">
-                    <label>请输入对方用户名:</label>
-                    <input type="text" name=""  placeholder="例如输入张三">
+                    <label>请&nbsp;&nbsp;输&nbsp;&nbsp;入&nbsp;&nbsp;账&nbsp;&nbsp;号:</label>
+                    <input id="name" type="text" name=""  placeholder="输入对方账号！">
                 </div>
                 <hr>
                 <div class="user">
-                    <label>转&nbsp;&nbsp;&nbsp;&nbsp;账&nbsp;&nbsp;&nbsp;&nbsp;金&nbsp;&nbsp;&nbsp;&nbsp;额:&nbsp;&nbsp;</label>
-                    <input type="text" name="" placeholder="例如输入“5000”">
+                    <label>转&nbsp;&nbsp;&nbsp;&nbsp;账&nbsp;&nbsp;&nbsp;&nbsp;金&nbsp;&nbsp;&nbsp;&nbsp;额:</label>
+                    <input id="money" type="text" name="" placeholder="例如输入“5000”！">
                 </div>
                 <hr>
                 <div class="user">
-                    <label>付&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;款&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</label>
-                    <input type="text" name="">
+                    <label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+                    <input id="password" type="text" name="" placeholder="输入自己的密码！">
                 </div>
                 <hr>
                 <div class="user">
-                    <label>付&nbsp;&nbsp;&nbsp;&nbsp;款&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;期：</label>
-                    <input type="text" name="">
+                    <label>付&nbsp;&nbsp;&nbsp;款&nbsp;&nbsp;&nbsp;日&nbsp;&nbsp;&nbsp;期：</label>
+                    <input id="date" type="text" name="">
                 </div>
                 <hr>
                 <div class="user">
                     <label>备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注:&nbsp;&nbsp;</label>
-                    <input type="text" name="" placeholder="描述账单信息">
+                    <input id="remark" type="text" name="" placeholder="描述账单信息">
                 </div>
                 <hr>
                 <div class="user">
@@ -64,6 +63,32 @@
             </form>
     </div>
 </body>
-</body>
+<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+    function myFunction() {
+        // 获取name的值
+        var name = $("#name").val();
+        var money = $("#money").val();
+        var password = $("#password").val();
+        var date = $("#date").val();
+        var remark = $("#remark").val();
+        var paw = ${user.getUsername()};
+
+        if (name === "") {
+            alert("该用户不存在！");
+        } else if (money === "") {
+            alert("转账金额不能为空！");
+        } else if ((money < 5000) || (money > 50000)) {
+            alert("转账金额为5千到5万之间！请重新输入！")
+        } else if (password) {
+            alert("密码不正确！");
+        } else if (date == "") {
+            alert("支付日期不能为空！");
+        } else if (remark === "") {
+            alert("备注不能为空！")
+        }
+    }
+    </script>
+
 
 </html>
