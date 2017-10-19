@@ -8,7 +8,8 @@
 <body>
 
 <br/>
-<form action="userAction!do_edit" method="post">
+<form action="updateinfo?user.id=${user.getId()}&user.username=${user.getUsername()}&user.password=${user.getPassword()}"
+				method="post">
 	<input name="user.id" type="hidden"  value="${user.id }" />
 	<table>
 		<tr>
@@ -18,15 +19,34 @@
 			</td>
 		</tr>
 		<tr>
+			<td>电话</td>
+			<td>
+				<input name="user.phone" type="text" value="${user.phone }"/>
+			</td>
+		</tr>
+		<tr>
+			<td>邮箱</td>
+			<td>
+				<input name="user.email" type="text" value="${user.email }"/>
+			</td>
+		</tr>
+		<tr>
+			<td>地址</td>
+			<td>
+				<input name="user.address" type="text" value="${user.address }"/>
+			</td>
+		</tr>
+		
+		<tr>
 			<td>余额</td>
 			<td>
-				<input name="user.balance" type="text" value="${user.balance }"/>
+				<input name="user.balance" type="text"  readonly="readonly"  value="${user.balance }"/>
 			</td>
 		</tr>
 		<tr>
 			<td colspan="2">
-				<button onclick="javascript:history.go(-1)">返回</button>
-				<input type="submit" value="保存"/>
+				<button onclick="javascript:history.back(-1)">返回</button>
+				<input type="submit" value="保存" />
 			</td>
 		</tr>
 	</table>

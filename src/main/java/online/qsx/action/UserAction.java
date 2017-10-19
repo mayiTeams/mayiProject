@@ -89,6 +89,11 @@ public class UserAction {
 		return "succeed";
 	}
 
+	public String to_edit() {
+		user=userServerImpl.getUser(user);
+		return "update";
+	}
+	
 	public String do_edit() {
 		userServerImpl.edit(user);
 		list = userServerImpl.getUsers();

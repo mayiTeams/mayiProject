@@ -34,13 +34,13 @@
     <div class="infotitle">个人信息</div>
     
     <div class="info">
-        <div class="info1">账号:&nbsp;&nbsp;${user.getUsername()}</div>
-        <div class="info1">姓名:&nbsp;&nbsp;${user.getUsername()}</div>
+       
+        <div class="info1">用户名:&nbsp;&nbsp;${user.getUsername()}</div>
         <div class="info1">性别:&nbsp;&nbsp;${user.getSex()}</div>
-        <div class="info1">年龄:&nbsp;&nbsp;</div>
-        <div class="info1">联系电话:&nbsp;&nbsp;</div>
-        <div class="info1">电子邮箱:&nbsp;&nbsp;</div>
-        <div class="info1">地址:</div>
+        
+        <div class="info1">联系电话:&nbsp;&nbsp;${user.getPhone()}</div>
+        <div class="info1">电子邮箱:&nbsp;&nbsp;${user.getEmail()}</div>
+        <div class="info1">地址:${user.getAddress()}</div>
         <div class="info1">余额:${user.getBalance()}</div>
           <div class="click"><a href="update">修改信息</a></div>     
     </div>

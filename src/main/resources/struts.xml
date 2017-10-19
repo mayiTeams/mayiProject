@@ -42,6 +42,14 @@
 		<action name="update" class="userAction" method="none">
 			<result name="succeed">/WEB-INF/jsp/update.jsp</result>
 		</action>
+		
+		<action name="updateinfo" class="userAction" method="do_edit">
+			<result name="succeed">/WEB-INF/jsp/user-info.jsp</result>
+		</action>
+		
+		<action name="list" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/list.jsp</result>
+		</action>
 
 		<!-- 注册验证：如果已经存在，不能跳转，否则跳转 -->
 		<action name="register" class="userAction" method="register">

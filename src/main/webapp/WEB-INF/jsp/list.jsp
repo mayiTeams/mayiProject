@@ -1,53 +1,52 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<style type="text/css" media="screen">
-table {
-	text-align: center;
-	margin: 0 auto;
-	margin-top: 50px;
-}
+<script type="text/javascript">
 
-a {
-	text-decoration: none
-}
-
-tr {
-	height: 40px;
-}
-</style>
+</script>
 </head>
 <body>
-	<table width="400px" border="1" cellpadding="0" cellspacing="0">
-		<tr style="font-weight: bold;">
-
-			<td>userID</td>
-			<td>username</td>
-			<td>password</td>
-			<td>delete</td>
-			<td>操作</td>
-		</tr>
-		<c:forEach items="${list}" var="obj">
-			<tr>
-				<td>${obj.id }</td>
-				<td>${obj.username }</td>
-				<td>${obj.password }</td>
-				<td>${obj.balance }</td>
-				<td><a href="delete?userModel.id=${obj.id }">删除</a></td>
-
-
-			</tr>
-
-		</c:forEach>
-		<tr>
-			<td colspan="5"><a href="save">新增</a></td>
-
-		</tr>
-	</table>
+<!-- EL -->
+ <table>
+ 	<thead>
+ 		<tr>
+	 		<th>编号</th>
+	 		<th>年龄</th>
+	 		<th>姓名</th>
+	 		<th>操作</th>
+ 		</tr>
+ 	</thead>
+ 	<tbody>
+		<c:forEach items="${list }" var="temp" varStatus="vs">
+	 		<tr
+	 		  <%-- 
+		 		   <c:if test="${vs.index%2==0 }">
+		 				style="background-color: red"
+		 		   </c:if>
+		 		   <c:if test="${vs.index%2==1 }">
+		 				style="background-color: green"
+		 		   </c:if>
+	 		   --%>
+	 		>
+	 			<td>${temp.id }</td>
+	 			<td>${temp.name }</td>
+	 			<td>
+					
+					<a href="userAction!to_edit?user.id=${temp.id }">修改</a>
+					
+				</td>
+	 		</tr>
+ 		</c:forEach>
+ 	</tbody>
+ 	<tfoot></tfoot>
+ </table>
+  
+ 	
+ 
+ 
 </body>
 </html>
