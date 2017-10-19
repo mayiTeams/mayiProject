@@ -120,16 +120,16 @@ div a {
 					<a href="rechargeAndWithdrow">充值提现</a>
 				</div>
 				<div class="menu">
-					<a href="payment.jsp">支付单</a>
+					<a href="payment">支付单</a>
 				</div>
 				<div class="menu">
-					<a href="fund-flow.jsp">资金流水</a>
+					<a href="fund-flow">资金流水</a>
 				</div>
 				<div class="menu">
 					<a href="risk-investment-analyse">投资风险等级测评</a>
 				</div>
 				<div class="menu">
-					<a href="changePassword.jsp">修改密码</a>
+					<a href="changePassword">修改密码</a>
 				</div>
 			</div>
 		</div>

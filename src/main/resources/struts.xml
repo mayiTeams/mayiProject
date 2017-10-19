@@ -52,9 +52,21 @@
 			<result name="succeed">/WEB-INF/jsp/login.jsp</result>
 		</action>
 
-		<!-- 返回账户首页 -->
+		<!-- 退出账户首页 -->
 		<action name="home-page" class="userAction" method="none">
 			<result name="succeed">main.jsp</result>
 		</action>
+		
+		<!-- 页面跳转 -->fund-flow
+		<action name="payment" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/payment.jsp</result>
+		</action>
+		<action name="fund-flow" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/fund-flow.jsp</result>
+		</action>
+		<action name="changePassword" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/changePassword.jsp</result>
+		</action>
+		
 	</package>
 </struts>
