@@ -19,8 +19,8 @@
 			<div class="center"></div>
 			<div class="logo"></div>
 			<div class="head">
-
 				<h1>用户注册</h1>
+				<br> <span class="false">你输入的用户名已经存在，请重新输入！</span>
 			</div>
 			<div class="name">
 				用&nbsp;户&nbsp;名&nbsp;称&nbsp;:&nbsp; <input type="text"
@@ -30,9 +30,30 @@
 				登&nbsp;陆&nbsp;密&nbsp;码&nbsp;:&nbsp; <input type="password"
 					name="user.password" id="password" placeholder="请输入您的密码！">
 			</div>
-			<div>
-				<h1>你输入的用户名已经存在，请重新输入！</h1>
+			<div class="repeat">
+				重&nbsp;复&nbsp;密&nbsp;码&nbsp;:&nbsp; <input type="password"
+					name="user.passwordRepeat" id="passwordRepeat"
+					placeholder="请输入您的确认密码！">
 			</div>
+			<div class="email">
+				电&nbsp;子&nbsp;邮&nbsp;箱&nbsp;:&nbsp; <input type="email"
+					name="user.email" id="email" placeholder="请输入您的邮箱！">
+			</div>
+			<div class="phone">
+				电&nbsp;话&nbsp;号&nbsp;码&nbsp;:&nbsp; <input type="phone"
+					name="user.phone" id="phone" placeholder="请输入您的电话！">
+			</div>
+			<div class="address">
+				家&nbsp;庭&nbsp;住&nbsp;址&nbsp;:&nbsp; <input type="address"
+					name="user.address" id="address" placeholder="请输入您的地址！">
+			</div>
+			<div class="sex">
+				性&nbsp;&nbsp;&nbsp;&nbsp;别： <input name="user.sex" type="radio"
+					value="1" checked="checked">男 <input name="user.sex"
+					type="radio" value="0">女
+			</div>
+
+			<hr>
 
 			<div class="btn1">
 				<button type="submit">注册</button>
