@@ -38,6 +38,21 @@
 		<action name="user-info" class="userAction" method="none">
 			<result name="succeed">/WEB-INF/jsp/user-info.jsp</result>
 		</action>
+
+
+		<action name="update" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/update.jsp</result>
+		</action>
+		
+		<action name="updateinfo" class="userAction" method="do_edit">
+			<result name="succeed">/WEB-INF/jsp/user-info.jsp</result>
+		</action>
+		
+		<action name="list" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/list.jsp</result>
+		</action>
+
+
 		<action name="risk-investment-analyse" class="userAction"
 			method="none">
 			<result name="succeed">/WEB-INF/jsp/risk-investment-analyse.jsp</result>
@@ -46,6 +61,7 @@
 		<action name="" class="userAction" method="none">
 			<result name="succeed">/WEB-INF/jsp/risk-investment-analyse.jsp</result>
 		</action>
+
 		<!-- 注册验证：如果已经存在，不能跳转，否则跳转 -->
 		<action name="register" class="userAction" method="register">
 			<result name="false">/WEB-INF/jsp/registerFalse.jsp</result>

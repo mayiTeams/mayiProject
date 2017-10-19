@@ -114,6 +114,10 @@ public class UserServerImpl {
 		return null;
 	}
 
+	public void edit(User user) {
+		userDaoImpl.edit(user);
+	}
+
 	/**
 	 * 注册
 	 * 
@@ -130,5 +134,6 @@ public class UserServerImpl {
 			}
 		}
 		return 0;
+
 	}
 }

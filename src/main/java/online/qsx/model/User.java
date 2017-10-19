@@ -55,6 +55,7 @@ public class User {
 	}
 
 	public short getSex() {
+	
 		return sex;
 	}
 
