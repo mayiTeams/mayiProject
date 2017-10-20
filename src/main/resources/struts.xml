@@ -30,5 +30,14 @@
 		<action name="withdrowMoney" class="userAction" method="withdrow">
 			<result name="succeed">/WEB-INF/jsp/home.jsp</result>
 		</action>
+
+		<action name="changePassword" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/changePassword.jsp</result>
+        </action>
+        <action name="passWordForm" class="userAction" method="passWord">
+			<result name="succeed">/WEB-INF/jsp/changePassword.jsp</result>
+        </action>
+
+
 	</package>
 </struts>

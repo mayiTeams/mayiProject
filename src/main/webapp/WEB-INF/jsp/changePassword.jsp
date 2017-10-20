@@ -15,7 +15,7 @@
         height: 100%;
         margin: 0;
         padding: 0;
-        overflow-x: hidden
+        overflow-x: hidden;
     }
 
     div a {
@@ -156,7 +156,7 @@
 <body>
     <div>
         <div class="tag"><img id="img-1" src="images/1.png" alt=""><a href="">宜信官网</a>
-            <img id="img-2" src="images/2.png" alt=""><span class="tag-1">xxx-xxx-xx</span><span class="tag-2">欢迎您，xxx <a href="">&nbsp; &nbsp;退出</a></span></div>
+            <img id="img-2" src="images/2.png" alt=""><span class="tag-1">xxx-xxx-xx</span><span class="tag-2">欢迎您, ${user.getUsername()} <a href="">&nbsp; &nbsp;退出</a></span></div>
         <div class="header">
             <img src="images/logo.png"> 宜人贷理财账户管理系统
         </div>
@@ -175,14 +175,14 @@
         <div class="right-menu">
             <div class="head"><img src="images/xd-1.png"></div>
             <div class="x-left">
-                <form name="registerForm" onsubmit="return verifyRegisterBeforeSave()" method="post">
+                <form action="passWordForm" onsubmit="return verifyRegisterBeforeSave()" method="post">
                     <div class="input-group ">
-                        <label class="input-label"><b>用户名称：</b></label>
-                        <input id="username" name="user.username" type="hidden" class="input" placeholder="请输入您的用户名！">
+                        <label class="input-label"><b>用户名称： ${user.getUsername()}</b></label>
+                        
                     </div>
                     <div class="input-group ">
                         <label class="input-label"><b>旧密码：</b></label>&nbsp &nbsp
-                        <input id="oldpassword" name="user.password" type="password" class="input" placeholder="请输入旧密码！">
+                        <input id="oldpassword" name="password" type="password" class="input" placeholder="请输入旧密码！">
                     </div>
                     <div class="input-group ">
                         <label class="input-label"><b>新密码 : </b></label>&nbsp &nbsp
@@ -209,10 +209,10 @@
                 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 包括你章录账号前后的任何一部分
                 <br> 密码区分大小写
                 <hr style="border:1px dotted #808080" />
-                <b> 不能使用的密码举例 : </b> 你的章录账导加上救字如[leon 01]
-                <br> 你自己的或青同事家人宠物的名字等
+                <b> 不能使用的密码举例 : </b> 你的登录名加上数字如[leon01]
+                <br> 你自己,同事,家人或宠物的名字等
                 <br> 电话号码生日或者其他证件号码
-                <br> 键盘上相邻的按建例如”asdf"
+                <br> 键盘上相邻的按建例如"asdf"
                 <br> 任何一个可在字典中直到的单词
             </div>
             <div class="foot" style="opacity: 0.5"><img src="images/xd-2.png"></div>
@@ -221,27 +221,30 @@
     <script type="text/javascript">
     function verifyRegisterBeforeSave() {
 
-
+        
         var oldpassword = $('#oldpassword').val();
         var newpassword = $('#newpassword').val();
         var repeatPassword = $('#repeatPassword').val();
-        var judge = true;
-        if (newpassword === "" || repeatPassword === "" || oldPassword === "") {
+        var accountPassword=${user.getPassword()}
+        
+        if (newpassword ===""|| repeatPassword === "" || oldpassword === "") {
             alert("请确认是否有空缺项！");
-            judge = false;
-
-        } else if (oldpassword === newpassword) {
+           return false;
+        } else if (newpassword ===accountPassword ) {
+            alert("不能使用旧密码！");
+            return false;
+        } else if (oldpassword == newpassword) {
             alert("新密码不能和旧密码相同！");
-            judge = false;
+            return false;
         } else if (newpassword.length < 6 || newpassword.length > 20 || repeatPassword.length < 6 || repeatPassword.length > 20) {
             alert("密码或重复密码长度应在6到20个字符之间！");
-            judge = false;
-        } else if (password != repeatPassword) {
-            alert("密码和重复密码不同，请重新输入！");
-            judge = false;
+            return false;
+        } else if (newpassword != repeatPassword) {
+            alert("新密码和重复密码不同，请重新输入！");
+            return false;
         } else {
             alert("修改成功！");
-            return judge;
+            return true;
         }
 
     }

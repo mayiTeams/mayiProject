@@ -32,4 +32,10 @@ public class UserDaoImpl {
 		baseDao.getHibernateTemplate()
 				.saveOrUpdate(new User(user.getId(), user.getUsername(), user.getPassword(), balance));
 	}
+
+	public void passWord(User user) {
+		//带id修改 不带只是保存
+		baseDao.getHibernateTemplate().saveOrUpdate(new User(user.getId(), user.getUsername(), user.getPassword(),user.getBalance()));
+		
+	}
 }

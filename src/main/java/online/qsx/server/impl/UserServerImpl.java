@@ -112,4 +112,26 @@ public class UserServerImpl {
 		}
 		return null;
 	}
+	/**
+	 * 获取当前用户的余额
+	 */
+	public String getUserPassword(User user) {
+		List<User> list = userDaoImpl.getUsers();
+		for (User us : list) {
+			if (us.getUsername().trim().equals(user.getUsername())
+					&& us.getPassword().trim().equals(user.getPassword())) {
+				return us.getPassword();
+			}
+		}
+		return null;
+	}
+	/**
+	 * 修改密码
+	 */
+
+	public void passWord(User user) {
+		
+		userDaoImpl.passWord(user);
+		
+	}
 }

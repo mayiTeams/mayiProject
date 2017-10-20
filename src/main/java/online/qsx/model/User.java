@@ -79,7 +79,11 @@ public class User {
 		this.id = id;
 		this.balance = balance;
 	}
+	
 
+	
+
+	
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", username=" + username + ", password=" + password + ", balance=" + balance + "]";

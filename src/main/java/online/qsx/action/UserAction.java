@@ -1,10 +1,8 @@
 package online.qsx.action;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import online.qsx.model.User;
 import online.qsx.server.impl.UserServerImpl;
 
@@ -76,6 +74,13 @@ public class UserAction {
 	public String withdrow(){
 		String balance=userServerImpl.getUserBlance(user);
 		userServerImpl.withdrow(user, balance);
+		return "succeed";
+	}
+	/**
+	 * 改密
+	 */
+	public String passWord(){
+		userServerImpl.passWord(user);
 		return "succeed";
 	}
 }

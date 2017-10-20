@@ -63,7 +63,7 @@
     .left-menu {
         width: 15%;
         height: 800px;
-        margin-left: 200px;
+        margin-left: 250px;
         background: #eee;
         color: #666;
         margin-top: 30px;
@@ -110,12 +110,12 @@
         </div>
         <div class="left-menu">
             <div class="infor">
-                <div class="menu"><a href="user-info.jsp">基本信息</a></div>
+                <div class="menu"><a href="user-info">基本信息</a></div>
                 <div class="menu"><a href="rechargeAndWithdrow">充值提现</a></div>
                 <div class="menu"><a href="payment.jsp">支付单</a></div>
                 <div class="menu"><a href="fund-flow.jsp">资金流水</a></div>
                 <div class="menu"><a href="risk-investment-analyse.jsp">投资风险等级测评</a></div>
-                <div class="menu"><a href="changePassword.jsp">修改密码</a></div>
+                <div class="menu"><a href="changePassword">修改密码</a></div>
             </div>
         </div>
     </div>
