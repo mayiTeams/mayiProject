@@ -20,6 +20,7 @@
 			<div class="logo"></div>
 			<div class="head">
 				<h1>用户注册</h1>
+				<br> <span class="false">你输入的用户名已经存在，请重新输入！</span>
 			</div>
 			<div class="name">
 				用&nbsp;户&nbsp;名&nbsp;称&nbsp;:&nbsp; <input type="text"

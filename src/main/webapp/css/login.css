@@ -15,7 +15,7 @@ body {
 .main {
     width: 900px;
     margin: 0 auto;
-    height: 750px;
+    height: 250px;
 }
 
 .center {
@@ -24,7 +24,7 @@ body {
     margin: 0 auto;
     width: 700px;
     height: 350px;
-    margin-top: 750px;
+    margin-top: 250px;
     margin-left: 100px;
     border-radius: 15px;
     opacity: 0.85;
@@ -36,13 +36,13 @@ body {
     background-size: 100%;
     width: 100px;
     height: 58px;
-    margin-top: 780px;
+    margin-top: 280px;
     margin-left: 300px;
 }
 
 .head h1 {
     position: absolute;
-    margin-top: 785px;
+    margin-top: 285px;
     margin-left: 440px;
 }
 
@@ -56,7 +56,7 @@ body {
 
 .name {
     position: absolute;
-    margin-top: 890px;
+    margin-top: 390px;
     margin-left: 220px;
     font-size: 18px;
     font-weight: 600;
@@ -64,7 +64,7 @@ body {
 
 .password {
     position: absolute;
-    margin-top: 950px;
+    margin-top: 450px;
     margin-left: 220px;
     font-size: 18px;
     font-weight: 600;
@@ -72,24 +72,24 @@ body {
 
 hr {
     width: 300px;
-    margin-top: -500px;
+    margin-top: 0px;
 }
 
 .btn1 {
     position: absolute;
-    margin-top: 1000px;
+    margin-top: 500px;
     margin-left: 340px;
 }
 
 .btn2 {
     position: absolute;
-    margin-top: 1000px;
+    margin-top: 500px;
     margin-left: 500px;
 }
 
 .foot {
     position: absolute;
-    margin-top: 1380px;
+    margin-top: 880px;
     margin-left:250px;
     color: white;
     font-size: 22px;

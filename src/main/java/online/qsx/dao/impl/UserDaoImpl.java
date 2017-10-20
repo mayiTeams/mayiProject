@@ -1,4 +1,4 @@
-package online.qsx.dao.impl;
+﻿package online.qsx.dao.impl;
 
 import java.util.List;
 
@@ -23,7 +23,12 @@ public class UserDaoImpl {
 
 	}
 
-	@SuppressWarnings("unchecked")
+	public void saveUserInfo(User user) {
+		baseDao.getHibernateTemplate()
+				.save(new User(user.getUsername(), user.getPassword(), user.getBalance(), user.getSex()));
+
+	}
+
 	public User getUser(User user) {
 		return baseDao.getHibernateTemplate().get(User.class, user.getId());
 	}
@@ -33,9 +38,26 @@ public class UserDaoImpl {
 				.saveOrUpdate(new User(user.getId(), user.getUsername(), user.getPassword(), balance));
 	}
 
+
 	public void passWord(User user) {
 		//带id修改 不带只是保存
 		baseDao.getHibernateTemplate().saveOrUpdate(new User(user.getId(), user.getUsername(), user.getPassword(),user.getBalance()));
 		
 	}
+
+	public void edit(User user) {
+		baseDao.getHibernateTemplate().saveOrUpdate(user);
+	}
+
+	public void updateUserInfo(User user) {
+		baseDao.getHibernateTemplate().saveOrUpdate(user);
+	}
+
+	/**
+	 * 注册
+	 */
+	public void register(User user) {
+		baseDao.getHibernateTemplate().save(user);
+	}
+
 }

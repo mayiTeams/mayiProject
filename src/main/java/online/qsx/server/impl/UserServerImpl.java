@@ -1,4 +1,4 @@
-package online.qsx.server.impl;
+﻿package online.qsx.server.impl;
 
 import java.util.List;
 
@@ -18,9 +18,7 @@ public class UserServerImpl {
 	 * 获取所有用户
 	 */
 	public List<User> getUsers() {
-
 		return userDaoImpl.getUsers();
-
 	}
 
 	/**
@@ -29,8 +27,14 @@ public class UserServerImpl {
 	 * @param user
 	 */
 	public void saveUser(User user) {
-		userDaoImpl.saveUser(user);
+		List<User> list = userDaoImpl.getUsers();
+		for (User us : list) {
+			if (us.getUsername().trim().equals(user.getUsername())
+					&& us.getPassword().trim().equals(user.getPassword())) {
 
+			}
+		}
+		userDaoImpl.saveUser(user);
 	}
 
 	/**
@@ -45,11 +49,8 @@ public class UserServerImpl {
 					&& us.getPassword().trim().equals(user.getPassword())) {
 				return "true";
 			}
-
 		}
-
 		return "false";
-
 	}
 
 	/**
@@ -88,15 +89,15 @@ public class UserServerImpl {
 		System.out.println("提现的钱：" + getBalance);
 		Double accoutnBalnce = Double.parseDouble(balance);
 		System.out.println("账户的钱" + accoutnBalnce);
-		if(accoutnBalnce>getBalance){
-		Double allBalance = accoutnBalnce - getBalance;
-		System.out.println("剩余的钱：" + allBalance);
-		String allBalance01 = Double.toString(allBalance);
-		userDaoImpl.updateBalance(user, allBalance01);
-		}else{
+		if (accoutnBalnce > getBalance) {
+			Double allBalance = accoutnBalnce - getBalance;
+			System.out.println("剩余的钱：" + allBalance);
+			String allBalance01 = Double.toString(allBalance);
+			userDaoImpl.updateBalance(user, allBalance01);
+		} else {
 			userDaoImpl.updateBalance(user, balance);
 		}
-  
+
 	}
 
 	/**
@@ -112,6 +113,7 @@ public class UserServerImpl {
 		}
 		return null;
 	}
+
 	/**
 	 * 获取当前用户的余额
 	 */
@@ -133,5 +135,28 @@ public class UserServerImpl {
 		
 		userDaoImpl.passWord(user);
 		
+	}
+
+	public void edit(User user) {
+		userDaoImpl.edit(user);
+	}
+
+	/**
+	 * 注册
+	 * 
+	 * @return
+	 */
+	public int register(User user) {
+		List<User> list = userDaoImpl.getUsers();
+		for (User us : list) {
+			if (us.getUsername().trim().equals(user.getUsername())) {
+				System.out.println("用户已存在！");
+				return -1;
+			} else {
+				userDaoImpl.register(user);
+			}
+		}
+		return 0;
+
 	}
 }

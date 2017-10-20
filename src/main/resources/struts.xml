@@ -5,9 +5,14 @@
 
 <struts>
 	<package name="default" namespace="/" extends="struts-default">
-	<action name="gologin" class="userAction" method="none">
+		<action name="gologin" class="userAction" method="none">
 			<result name="succeed">/WEB-INF/jsp/login.jsp</result>
 		</action>
+		<!-- 跳转到注册页面 -->
+		<action name="goRegister" class="userAction" method="skip">
+			<result name="succeed">/WEB-INF/jsp/register.jsp</result>
+		</action>
+
 		<action name="login" class="userAction" method="login">
 			<result name="succeed">/WEB-INF/jsp/home.jsp</result>
 			<result name="false">/WEB-INF/jsp/login.jsp</result>
@@ -31,6 +36,7 @@
 			<result name="succeed">/WEB-INF/jsp/home.jsp</result>
 		</action>
 
+
 		<action name="changePassword" class="userAction" method="none">
 			<result name="succeed">/WEB-INF/jsp/changePassword.jsp</result>
         </action>
@@ -39,5 +45,55 @@
         </action>
 
 
+
+		<action name="user-info" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/user-info.jsp</result>
+		</action>
+
+
+		<action name="update" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/update.jsp</result>
+		</action>
+		
+		<action name="updateinfo" class="userAction" method="do_edit">
+			<result name="list">/WEB-INF/jsp/user-info.jsp</result>
+		</action>
+		
+		<action name="list" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/list.jsp</result>
+		</action>
+
+
+		<action name="risk-investment-analyse" class="userAction"
+			method="none">
+			<result name="succeed">/WEB-INF/jsp/risk-investment-analyse.jsp</result>
+		</action>
+
+		<action name="" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/risk-investment-analyse.jsp</result>
+		</action>
+
+		<!-- 注册验证：如果已经存在，不能跳转，否则跳转 -->
+		<action name="register" class="userAction" method="register">
+			<result name="false">/WEB-INF/jsp/registerFalse.jsp</result>
+			<result name="succeed">/WEB-INF/jsp/login.jsp</result>
+		</action>
+
+		<!-- 退出账户首页 -->
+		<action name="home-page" class="userAction" method="none">
+			<result name="succeed">main.jsp</result>
+		</action>
+		
+		<!-- 页面跳转 -->
+		<action name="payment" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/payment.jsp</result>
+		</action>
+		<action name="fund-flow" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/fund-flow.jsp</result>
+		</action>
+		<action name="changePassword" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/changePassword.jsp</result>
+		</action>
+		
 	</package>
 </struts>
