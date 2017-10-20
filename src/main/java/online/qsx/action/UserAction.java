@@ -89,6 +89,15 @@ public class UserAction {
 		return "succeed";
 	}
 
+	/**
+	 * 改密
+	 */
+	public String passWord(){
+		userServerImpl.passWord(user);
+		return "succeed";
+	}
+
+
 	public String to_edit() {
 		user=userServerImpl.getUser(user);
 		return "update";
@@ -111,5 +120,4 @@ public class UserAction {
 			return "succeed";
 		}
 	}
-
 }
