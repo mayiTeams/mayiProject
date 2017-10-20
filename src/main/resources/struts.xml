@@ -14,7 +14,7 @@
 		</action>
 
 		<action name="login" class="userAction" method="login">
-			<result name="succeed">/WEB-INF/jsp/home.jsp</result>
+			<result name="succeed">main.jsp</result>
 			<result name="false">/WEB-INF/jsp/login.jsp</result>
 		</action>
 		<action name="UserRegister" class="userAction" method="save">
@@ -94,6 +94,14 @@
 		<action name="changePassword" class="userAction" method="none">
 			<result name="succeed">/WEB-INF/jsp/changePassword.jsp</result>
 		</action>
-		
+		<action name="myAccount" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/home.jsp</result>
+		</action>
+		<action name="toLend" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/withdrow.jsp</result>
+		</action>
+		<action name="toBorrow" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/recharge.jsp</result>
+		</action>
 	</package>
 </struts>
