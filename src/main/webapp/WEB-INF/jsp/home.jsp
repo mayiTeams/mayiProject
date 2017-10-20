@@ -167,6 +167,36 @@
             <br> 3、理财也涵盖了风险管理。因为未来的更多流量具有不确定性，包括人身风险、财产风险与市场风险，都会影响到现金流入（收入中断风险）<br>或现金流出（费用递增风险）。
         </div>
     </div>
+		</div>
+		<div class="header">
+			<img src="images/logo.png"> 宜人贷理财账户管理系统
+		</div>
+		<div class="home">
+			<a href="home-page">返回我的账户首页</a>
+		</div>
+		<div class="left-menu">
+			<div class="infor">
+				<div class="menu">
+					<a href="user-info">基本信息</a>
+				</div>
+				<div class="menu">
+					<a href="rechargeAndWithdrow">借款出借</a>
+				</div>
+				<div class="menu">
+					<a href="payment">支付单</a>
+				</div>
+				<div class="menu">
+					<a href="fund-flow">资金流水</a>
+				</div>
+				<div class="menu">
+					<a href="risk-investment-analyse">投资风险等级测评</a>
+				</div>
+				<div class="menu">
+					<a href="changePassword">修改密码</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
