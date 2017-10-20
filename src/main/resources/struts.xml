@@ -38,14 +38,21 @@
 		<action name="user-info" class="userAction" method="none">
 			<result name="succeed">/WEB-INF/jsp/user-info.jsp</result>
 		</action>
-		<action name="payment" class="userAction" method="none">
-			<result name="succeed">/WEB-INF/jsp/payment.jsp</result>
-		</action>
+		
+		
 		<!-- 注册验证：如果已经存在，不能跳转，否则跳转 -->
 		<action name="register" class="userAction" method="register">
 			<result name="false">/WEB-INF/jsp/registerFalse.jsp</result>
 			<result name="succeed">/WEB-INF/jsp/login.jsp</result>
 		</action>
+		
+		<!--支付单页面：如果用户名和密码正确，则可是跳转。否则不可以  -->
+		<!--calss:指定方法所在的类里  -->
+		<action name="payment" class="userAction" method="payment">
+			<result name="succeed">/WEB-INF/jsp/payment.jsp</result>
+			<result name="flase">/WEB-INF/jsp/paymentFalse.jsp</result>
+		</action>
+		
 
 	</package>
 </struts>

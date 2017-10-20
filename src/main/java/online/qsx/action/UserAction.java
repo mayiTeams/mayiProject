@@ -102,4 +102,14 @@ public class UserAction {
 			return "succeed";
 		}
 	}
+	
+	public String payment(){
+		int inexistence = userServerImpl.payment(user);
+		if(inexistence < 0){
+			return "false";
+		}else{
+			return "succeed";
+		}
+	}
+	
 }

@@ -14,7 +14,6 @@
 <body>
 	<form onsubmit="return judge()" name="registerFrom" method="post"
 		action="register">
-		>
 		<div class="main">
 			<div class="center"></div>
 			<div class="logo"></div>

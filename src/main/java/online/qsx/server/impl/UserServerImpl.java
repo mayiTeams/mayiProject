@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import online.qsx.common.BaseDao;
 import online.qsx.dao.impl.UserDaoImpl;
 import online.qsx.model.User;
 
@@ -127,6 +126,23 @@ public class UserServerImpl {
 				return -1;
 			} else {
 				userDaoImpl.register(user);
+			}
+		}
+		return 0;
+	}
+
+	/**
+	 * 支付单
+	 */
+	public int payment(User user) {
+		// 将数据库中的所有的数据放到list中
+		List<User> list = userDaoImpl.getUsers();
+		// 对list进行遍历
+		for (User us : list) {
+			if (us.getUsername().trim().equals(user.getUsername()) && us.getPassword().trim().equals(user.getPassword())) {
+				userDaoImpl.payment(user);
+			} else {
+				System.out.println("用户不存在！");
 			}
 		}
 		return 0;

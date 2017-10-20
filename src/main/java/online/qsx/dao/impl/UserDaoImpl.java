@@ -48,4 +48,12 @@ public class UserDaoImpl {
 	public void register(User user) {
 		baseDao.getHibernateTemplate().save(user);
 	}
+
+	
+	/**
+	 * 支付单
+	 */
+	public void payment(User user) {
+		baseDao.getHibernateTemplate().save(user);
+	}
 }

@@ -14,7 +14,6 @@
 <body>
 	<form onsubmit="return judge()" name="registerFrom" method="post"
 		action="register">
-		>
 		<div class="main">
 			<div class="center"></div>
 			<div class="logo"></div>
@@ -52,7 +51,6 @@
 					value="1" checked="checked">男 <input name="user.sex"
 					type="radio" value="0">女
 			</div>
-
 			<hr>
 
 			<div class="btn1">

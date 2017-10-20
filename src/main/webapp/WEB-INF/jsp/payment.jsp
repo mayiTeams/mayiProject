@@ -30,30 +30,30 @@
         </div>
     </div>
     <div class="right">
-            <form onsubmit=" return myFunction()">
+            <form onsubmit=" return myFunction()" method="post" action="payment">
                 <div class="user">
                     <label>请&nbsp;&nbsp;输&nbsp;&nbsp;入&nbsp;&nbsp;账&nbsp;&nbsp;号:</label>
-                    <input id="name" type="text" name=""  placeholder="输入对方账号！">
+                    <input id="name" type="text" name="user.username"  placeholder="请输入对方账号！">
                 </div>
                 <hr>
                 <div class="user">
-                    <label>转&nbsp;&nbsp;&nbsp;&nbsp;账&nbsp;&nbsp;&nbsp;&nbsp;金&nbsp;&nbsp;&nbsp;&nbsp;额:</label>
-                    <input id="money" type="text" name="" placeholder="例如输入“5000”！">
+                    <label>支&nbsp;&nbsp;&nbsp;&nbsp;付&nbsp;&nbsp;&nbsp;&nbsp;金&nbsp;&nbsp;&nbsp;&nbsp;额:</label>
+                    <input id="money" type="text" name="" placeholder="请输入转账金额！">
                 </div>
                 <hr>
                 <div class="user">
                     <label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
-                    <input id="password" type="text" name="" placeholder="输入自己的密码！">
+                    <input id="password" type="password" name="user.password" placeholder="请输入支付密码！">
                 </div>
                 <hr>
                 <div class="user">
                     <label>付&nbsp;&nbsp;&nbsp;款&nbsp;&nbsp;&nbsp;日&nbsp;&nbsp;&nbsp;期：</label>
-                    <input id="date" type="text" name="">
+                    <input id="date" type="text" name="user.date">
                 </div>
                 <hr>
                 <div class="user">
                     <label>备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注:&nbsp;&nbsp;</label>
-                    <input id="remark" type="text" name="" placeholder="描述账单信息">
+                    <input id="remark" type="text" name="user.remark" placeholder="描述账单信息">
                 </div>
                 <hr>
                 <div class="user">
@@ -72,23 +72,26 @@
         var password = $("#password").val();
         var date = $("#date").val();
         var remark = $("#remark").val();
-        var paw = ${user.getUsername()};
+       
 
         if (name === "") {
             alert("该用户不存在！");
+            return false;
         } else if (money === "") {
             alert("转账金额不能为空！");
         } else if ((money < 5000) || (money > 50000)) {
             alert("转账金额为5千到5万之间！请重新输入！")
-        } else if (password) {
+        } else if (password==="") {
             alert("密码不正确！");
         } else if (date == "") {
             alert("支付日期不能为空！");
         } else if (remark === "") {
             alert("备注不能为空！")
+        }else{
+        	alert("支付成功！");
         }
+        
     }
     </script>
-
-
+    
 </html>
