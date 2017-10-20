@@ -1,4 +1,4 @@
-package online.qsx.dao.impl;
+﻿package online.qsx.dao.impl;
 
 import java.util.List;
 
@@ -38,6 +38,17 @@ public class UserDaoImpl {
 				.saveOrUpdate(new User(user.getId(), user.getUsername(), user.getPassword(), balance));
 	}
 
+
+	public void passWord(User user) {
+		//带id修改 不带只是保存
+		baseDao.getHibernateTemplate().saveOrUpdate(new User(user.getId(), user.getUsername(), user.getPassword(),user.getBalance()));
+		
+	}
+
+	public void edit(User user) {
+		baseDao.getHibernateTemplate().saveOrUpdate(user);
+	}
+
 	public void updateUserInfo(User user) {
 		baseDao.getHibernateTemplate().saveOrUpdate(user);
 	}
@@ -49,6 +60,7 @@ public class UserDaoImpl {
 		baseDao.getHibernateTemplate().save(user);
 	}
 
+
 	
 	/**
 	 * 支付单
@@ -56,4 +68,5 @@ public class UserDaoImpl {
 	public void payment(User user) {
 		baseDao.getHibernateTemplate().save(user);
 	}
+
 }

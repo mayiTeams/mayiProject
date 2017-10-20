@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
 	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
@@ -35,11 +35,48 @@
 		<action name="withdrowMoney" class="userAction" method="withdrow">
 			<result name="succeed">/WEB-INF/jsp/home.jsp</result>
 		</action>
+
+
+		<action name="changePassword" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/changePassword.jsp</result>
+        </action>
+        <action name="passWordForm" class="userAction" method="passWord">
+			<result name="succeed">/WEB-INF/jsp/changePassword.jsp</result>
+        </action>
+
+
+
 		<action name="user-info" class="userAction" method="none">
 			<result name="succeed">/WEB-INF/jsp/user-info.jsp</result>
 		</action>
+
 		
 		
+
+
+
+		<action name="update" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/update.jsp</result>
+		</action>
+		
+		<action name="updateinfo" class="userAction" method="do_edit">
+			<result name="list">/WEB-INF/jsp/user-info.jsp</result>
+		</action>
+		
+		<action name="list" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/list.jsp</result>
+		</action>
+
+
+		<action name="risk-investment-analyse" class="userAction"
+			method="none">
+			<result name="succeed">/WEB-INF/jsp/risk-investment-analyse.jsp</result>
+		</action>
+
+		<action name="" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/risk-investment-analyse.jsp</result>
+		</action>
+
 		<!-- 注册验证：如果已经存在，不能跳转，否则跳转 -->
 		<action name="register" class="userAction" method="register">
 			<result name="false">/WEB-INF/jsp/registerFalse.jsp</result>
@@ -54,5 +91,29 @@
 		</action>
 		
 
+		<!-- 退出账户首页 -->
+		<action name="home-page" class="userAction" method="none">
+			<result name="succeed">main.jsp</result>
+		</action>
+		
+		<!-- 页面跳转 -->
+		<action name="payment" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/payment.jsp</result>
+		</action>
+		<action name="fund-flow" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/fund-flow.jsp</result>
+		</action>
+		<action name="changePassword" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/changePassword.jsp</result>
+		</action>
+		<action name="myAccount" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/home.jsp</result>
+		</action>
+		<action name="toLend" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/withdrow.jsp</result>
+		</action>
+		<action name="toBorrow" class="userAction" method="none">
+			<result name="succeed">/WEB-INF/jsp/recharge.jsp</result>
+		</action>
 	</package>
 </struts>

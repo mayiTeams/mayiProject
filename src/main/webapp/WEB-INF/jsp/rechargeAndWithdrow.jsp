@@ -12,24 +12,24 @@
 <body>
 	<div>
 		<div class="tag">
-			<img id="img-1" src="images/1.png" alt=""><a href="">宜信官网</a> <img
+			<img id="img-1" src="images/1.png" alt=""><a href="home-page">宜信官网</a> <img
 				id="img-2" src="images/2.png" alt=""><span class="tag-1">xxx-xxx-xx</span><span
-				class="tag-2">欢迎您，${user.getUsername()} <a href="">&nbsp;
+				class="tag-2">欢迎您，${user.getUsername()} <a href="home-page">&nbsp;
 					&nbsp;退出</a></span>
 		</div>
 		<div class="header">
 			<img src="images/logo.png"> 宜人贷理财账户管理系统
 		</div>
 		<div class="home">
-			<a href="">返回我的账户首页</a></span>
+			<a href="myAccount">返回首页</a></span>
 		</div>
 		<div class="left-menu">
 			<div class="infor">
 				<div class="menu">
-					<a href="recharge">充值</a>
+					<a href="recharge">借贷</a>
 				</div>
 				<div class="menu">
-					<a href="withdrow">提现</a>
+					<a href="withdrow">借出</a>
 				</div>
 
 			</div>

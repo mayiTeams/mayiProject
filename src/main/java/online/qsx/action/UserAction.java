@@ -43,7 +43,6 @@ public class UserAction {
 	public String findUsers() {
 		list = userServerImpl.getUsers();
 		return "succeed";
-
 	}
 
 	public String save() {
@@ -53,7 +52,6 @@ public class UserAction {
 	}
 
 	public String none() {
-
 		return "succeed";
 	}
 
@@ -89,6 +87,26 @@ public class UserAction {
 		String balance = userServerImpl.getUserBlance(user);
 		userServerImpl.withdrow(user, balance);
 		return "succeed";
+	}
+
+	/**
+	 * 改密
+	 */
+	public String passWord(){
+		userServerImpl.passWord(user);
+		return "succeed";
+	}
+
+
+	public String to_edit() {
+		user=userServerImpl.getUser(user);
+		return "update";
+	}
+	
+	public String do_edit() {
+		userServerImpl.edit(user);
+		list = userServerImpl.getUsers();
+		return "list";
 	}
 
 	/**

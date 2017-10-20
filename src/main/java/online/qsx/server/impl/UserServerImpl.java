@@ -1,4 +1,4 @@
-package online.qsx.server.impl;
+﻿package online.qsx.server.impl;
 
 import java.util.List;
 
@@ -114,6 +114,33 @@ public class UserServerImpl {
 	}
 
 	/**
+	 * 获取当前用户的余额
+	 */
+	public String getUserPassword(User user) {
+		List<User> list = userDaoImpl.getUsers();
+		for (User us : list) {
+			if (us.getUsername().trim().equals(user.getUsername())
+					&& us.getPassword().trim().equals(user.getPassword())) {
+				return us.getPassword();
+			}
+		}
+		return null;
+	}
+	/**
+	 * 修改密码
+	 */
+
+	public void passWord(User user) {
+		
+		userDaoImpl.passWord(user);
+		
+	}
+
+	public void edit(User user) {
+		userDaoImpl.edit(user);
+	}
+
+	/**
 	 * 注册
 	 * 
 	 * @return
@@ -129,6 +156,7 @@ public class UserServerImpl {
 			}
 		}
 		return 0;
+
 	}
 
 	/**
