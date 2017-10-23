@@ -188,7 +188,7 @@ div a {
 				</tr>
 				<tr>
 					<td>余额:</td>
-					<td><input name="user.balance" type="text" readonly="readonly"
+					<td><input name="user.balance" type="hidden" readonly="readonly"
 						value="${user.balance }" placeholder="只能查看！！" /></td>
 				</tr>
 				<tr>
