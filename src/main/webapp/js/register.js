@@ -24,8 +24,7 @@ function judge() {
 	} else if (password.length < 6 || password.length > 20) {
 		alert("密码和用户密码长度必须在6到20个字符之间");
 		return false;
-	} else
-		alert("注册成功！")
+	}
 	return true;
 
 }
