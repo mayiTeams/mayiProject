@@ -10,60 +10,6 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-    <div>
-        <div class="tag"><img id="img-1" src="images/1.png" alt=""><a href="">宜信官网</a>
-            <img id="img-2" src="images/2.png" alt=""><span class="tag-1">xxx-xxx-xx</span><span class="tag-2">欢迎您，${user.getUsername()}<a href="">&nbsp; &nbsp;退出</a></span></div>
-        <div class="header">
-            <img src="images/logo.png"> 宜人贷理财账户管理系统
-        </div>
-        <div class="home"><a href="index.html">返回我的账户首页</a>
-        </div>
-        <div class="left-menu">
-            <div class="infor">
-                <div class="menu"><a href="user-info.jsp">基本信息</a></div>
-                <div class="menu"><a href="rechargeAndWithdrow.jsp">充值提现</a></div>
-                <div class="menu"><a href="payment.jsp">支付单</a></div>
-                <div class="menu"><a href="fund-flow.jsp">资金流水</a></div>
-                <div class="menu"><a href="risk-investment-analyse.jsp">投资风险等级测评</a></div>
-                <div class="menu"><a href="changePassword.jsp">修改密码</a></div>
-            </div>
-        </div>
-    </div>
-    <div class="right">
-            <form onsubmit=" return myFunction()" method="post" action="payment">
-                <div class="user">
-                    <label>请&nbsp;&nbsp;输&nbsp;&nbsp;入&nbsp;&nbsp;账&nbsp;&nbsp;号:</label>
-                    <input id="name" type="text" name="user.username"  placeholder="请输入对方账号！">
-                </div>
-                <hr>
-                <div class="user">
-                    <label>支&nbsp;&nbsp;&nbsp;&nbsp;付&nbsp;&nbsp;&nbsp;&nbsp;金&nbsp;&nbsp;&nbsp;&nbsp;额:</label>
-                    <input id="money" type="text" name="" placeholder="请输入转账金额！">
-                </div>
-                <hr>
-                <div class="user">
-                    <label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
-                    <input id="password" type="password" name="user.password" placeholder="请输入支付密码！">
-                </div>
-                <hr>
-                <div class="user">
-                    <label>付&nbsp;&nbsp;&nbsp;款&nbsp;&nbsp;&nbsp;日&nbsp;&nbsp;&nbsp;期：</label>
-                    <input id="date" type="text" name="user.date">
-                </div>
-                <hr>
-                <div class="user">
-                    <label>备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注:&nbsp;&nbsp;</label>
-                    <input id="remark" type="text" name="user.remark" placeholder="描述账单信息">
-                </div>
-                <hr>
-                <div class="user">
-                    <input type="submit" name="" value="提交" class="user_button">
-                    <input type="reset" name="" value="重置" class="user_button">
-                </div>
-            </form>
-    </div>
-=======
 	<div>
 		<div class="tag">
 			<img id="img-1" src="images/1.png" alt=""><a href="">宜信官网</a> <img
@@ -101,7 +47,7 @@
 	</div>
 	<div class="right">
 		<form>
-			<form>
+		
 				<div class="user">
 					<label>请输入对方用户名:</label> <input type="text" name=""
 						placeholder="例如输入张三">
@@ -133,7 +79,7 @@
 				</div>
 			</form>
 	</div>
->>>>>>> 8ca176062345e1acb576d7ecc0a166d50f7899ac
+
 </body>
 <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript">
