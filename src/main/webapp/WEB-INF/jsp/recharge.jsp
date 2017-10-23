@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>充值</title>
+<title>借贷</title>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="css/lrstyle.css">
 </head>
