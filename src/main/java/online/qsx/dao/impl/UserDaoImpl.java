@@ -60,4 +60,13 @@ public class UserDaoImpl {
 		baseDao.getHibernateTemplate().save(user);
 	}
 
+
+	
+	/**
+	 * 支付单
+	 */
+	public void payment(User user) {
+		baseDao.getHibernateTemplate().save(user);
+	}
+
 }

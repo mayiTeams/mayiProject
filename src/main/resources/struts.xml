@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
 	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
@@ -50,6 +50,10 @@
 			<result name="succeed">/WEB-INF/jsp/user-info.jsp</result>
 		</action>
 
+		
+		
+
+
 
 		<action name="update" class="userAction" method="none">
 			<result name="succeed">/WEB-INF/jsp/update.jsp</result>
@@ -78,6 +82,14 @@
 			<result name="false">/WEB-INF/jsp/registerFalse.jsp</result>
 			<result name="succeed">/WEB-INF/jsp/login.jsp</result>
 		</action>
+		
+		<!--支付单页面：如果用户名和密码正确，则可是跳转。否则不可以  -->
+		<!--calss:指定方法所在的类里  -->
+		<action name="payment" class="userAction" method="payment">
+			<result name="succeed">/WEB-INF/jsp/payment.jsp</result>
+			<result name="flase">/WEB-INF/jsp/paymentFalse.jsp</result>
+		</action>
+		
 
 		<!-- 退出账户首页 -->
 		<action name="home-page" class="userAction" method="none">
