@@ -96,10 +96,7 @@
 			<result name="succeed">main.jsp</result>
 		</action>
 		
-		<!-- 页面跳转 -->
-		<action name="payment" class="userAction" method="none">
-			<result name="succeed">/WEB-INF/jsp/payment.jsp</result>
-		</action>
+		
 		<action name="fund-flow" class="userAction" method="none">
 			<result name="succeed">/WEB-INF/jsp/fund-flow.jsp</result>
 		</action>
