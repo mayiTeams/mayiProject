@@ -14,7 +14,7 @@
 		<div class="tag">
 			<img id="img-1" src="images/1.png" alt=""><a href="">宜信官网</a> <img
 				id="img-2" src="images/2.png" alt=""><span class="tag-1">xxx-xxx-xx</span><span
-				class="tag-2">欢迎您，${user.getUsername()}<a href="">&nbsp;
+				class="tag-2">欢迎您，${user.getUsername()}<a href="home-page">&nbsp;
 					&nbsp;退出</a></span>
 		</div>
 		<div class="header">

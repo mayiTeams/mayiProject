@@ -167,8 +167,9 @@ a {
 			<img src="img/zz-1.png">
 		</div>
 		<div class="hand-2">
-			<a href="#">欢迎来到宜人贷！ 登录 |</a> <a href="#" style="color: red;">
-				快速注册 </a><a href="#">| 新手引导</a><a href="#">| 帮助中心</a>
+			<a href="gologin">欢迎来到宜人贷！登录 |</a> <a href="goRegister"
+				style="color: red;"> 快速注册</a><a href="#">| 新手引导</a><a href="#">|
+				帮助中心</a>
 		</div>
 	</div>
 	<div class="xd-two">
