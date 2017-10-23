@@ -60,8 +60,6 @@ public class UserDaoImpl {
 		baseDao.getHibernateTemplate().save(user);
 	}
 
-
-	
 	/**
 	 * 支付单
 	 */
