@@ -25,7 +25,7 @@ public class User {
 	private short sex;
 	private Date date;
 	private String remark;
-	private String accounts;
+	
 
 	public Date getDate() {
 		return date;
