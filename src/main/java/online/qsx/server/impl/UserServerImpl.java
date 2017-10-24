@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import online.qsx.dao.impl.UserDaoImpl;
+import online.qsx.model.Log;
 import online.qsx.model.User;
 
 @Service
@@ -187,7 +188,12 @@ public class UserServerImpl {
 		}
 		return 0;
 	}
-	public User getUser1(User user) {
-		return userDaoImpl.getUser(user);
+	
+	/**
+	 * @param log
+	 * @return
+	 */
+	public List<Log> foundLog(Log log) {
+		return userDaoImpl.getLogs();
 	}
 }
