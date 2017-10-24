@@ -32,6 +32,7 @@ public class UserDaoImpl {
 	public User getUser(User user) {
 		return baseDao.getHibernateTemplate().get(User.class, user.getId());
 	}
+	
 
 	public void updateBalance(User user, String balance) {
 		baseDao.getHibernateTemplate()

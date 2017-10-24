@@ -187,4 +187,7 @@ public class UserServerImpl {
 		}
 		return 0;
 	}
+	public User getUser1(User user) {
+		return userDaoImpl.getUser(user);
+	}
 }
