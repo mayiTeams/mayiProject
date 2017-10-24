@@ -1,5 +1,6 @@
 ﻿package online.qsx.dao.impl;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,11 +35,18 @@ public class UserDaoImpl {
 		return baseDao.getHibernateTemplate().get(User.class, user.getId());
 	}
 
-	public void updateBalance(User user, String balance) {
-		baseDao.getHibernateTemplate()
-				.saveOrUpdate(new User(user.getId(), user.getUsername(), user.getPassword(), balance));
+	public void updateBalance(User user,String balance) {
+		baseDao.getHibernateTemplate().saveOrUpdate(new User(user.getId(), user.getUsername(), user.getPassword(), balance));
+		
 	}
 
+	public void saveLog1(User user, Double getBalance, Double accoutnBalnce, String allBalance01) {
+		baseDao.getHibernateTemplate().save(new Log(new Date(),"借入",getBalance,0D,allBalance01));
+	}
+	
+	public void saveLog2(User user, Double getBalance, Double accoutnBalnce, String allBalance01) {
+		baseDao.getHibernateTemplate().save(new Log(new Date(),"借出",0D,getBalance,allBalance01));
+	}
 
 	public void passWord(User user) {
 		//带id修改 不带只是保存
@@ -75,5 +83,7 @@ public class UserDaoImpl {
 	public List<Log> getLogs() {
 		return (List<Log>) baseDao.getHibernateTemplate().find("from Log");
 	}
+
+	
 
 }

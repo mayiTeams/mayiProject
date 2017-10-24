@@ -1,12 +1,19 @@
 package online.qsx.model;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -26,6 +33,22 @@ public class User {
 	private Date date;
 	private String remark;
 	private Double paymentMoney;
+
+	// 特殊属性 user
+	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@JoinTable(name = "tb_temp", // 中间表的表名
+			joinColumns = { @JoinColumn(name = "user_id") // 关联列
+			}, inverseJoinColumns = { @JoinColumn(name = "log_id") // 其他列
+			})
+	private Set<Log> logs = new HashSet<Log>();
+
+	public Set<Log> getLogs() {
+		return logs;
+	}
+
+	public void setLogs(Set<Log> logs) {
+		this.logs = logs;
+	}
 
 	public Date getDate() {
 		return date;
@@ -84,7 +107,7 @@ public class User {
 	}
 
 	public short getSex() {
-	
+
 		return sex;
 	}
 
@@ -123,8 +146,6 @@ public class User {
 		this.password = password;
 		this.balance = balance;
 	}
-
-
 
 	public User(Long id, String username, String password, String balance, String email, String phone, String address,
 			short sex, Date date, String remark, Double paymentMoney) {
@@ -196,7 +217,6 @@ public class User {
 		this.balance = balance;
 	}
 
-	
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", username=" + username + ", password=" + password + ", balance=" + balance

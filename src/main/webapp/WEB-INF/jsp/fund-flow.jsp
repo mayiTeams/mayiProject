@@ -147,7 +147,7 @@ div a {
 			<img src="images/logo.png"> 宜人贷理财账户管理系统
 		</div>
 		<div class="home">
-			<a href="home-page">返回我的账户首页</a></span>
+			<a href="home-page">返回我的账户首页</a>
 		</div>
 		<div class="left-menu">
 			<div class="infor">
@@ -173,13 +173,11 @@ div a {
 		</div>
 		<div class="right-info">
 			<div class="table">
+			<div>
+			<a href="home-page">我的账户</a>>资金流水</div>
 				<div>
 					<p>当前余额：${user.getBalance()}元</p>
-				</div>
-				<div>
-					<span style="margin-left: 35px">合计：&nbsp;&nbsp;</span> <span>总收入:xxxxxx&nbsp;&nbsp;</span><span>总支出:xxxx</span>
-					<br> <br> <br>
-				</div>
+				</div><br> <br>
 				<table width="60%" border="1" cellpadding="0" cellspacing="0">
 					<tr class="to">
 						<th>序号</th>
@@ -187,6 +185,7 @@ div a {
 						<th>交易项目</th>
 						<th>收入(元)</th>
 						<th>支出(元)</th>
+						<th>余额(元)</th>
 					</tr>
 					<c:forEach items="${lists}" var="temp">
 						<tr>
@@ -195,6 +194,7 @@ div a {
 							<td>${temp.project}</td>
 							<td>${temp.income}</td>
 							<td>${temp.outcome}</td>
+							<td>${temp.allbalance}</td>
 						</tr>
 					</c:forEach>
 				

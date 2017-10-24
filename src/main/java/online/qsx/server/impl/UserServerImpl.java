@@ -79,6 +79,7 @@ public class UserServerImpl {
 		System.out.println("总的钱：" + allBalance);
 		String allBalance01 = Double.toString(allBalance);
 		userDaoImpl.updateBalance(user, allBalance01);
+		userDaoImpl.saveLog1(user, getBalance, accoutnBalnce, allBalance01);
 	}
 
 	/**
@@ -94,8 +95,9 @@ public class UserServerImpl {
 			System.out.println("剩余的钱：" + allBalance);
 			String allBalance01 = Double.toString(allBalance);
 			userDaoImpl.updateBalance(user, allBalance01);
+			userDaoImpl.saveLog2(user, getBalance, accoutnBalnce, allBalance01);
 		} else {
-			userDaoImpl.updateBalance(user, balance);
+			userDaoImpl.updateBalance(user,balance);
 		}
 
 	}
