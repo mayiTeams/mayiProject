@@ -127,37 +127,38 @@ div a {
 		<div class="tag">
 			<img id="img-1" src="images/1.png" alt=""><a href="">宜信官网</a> <img
 				id="img-2" src="images/2.png" alt=""><span class="tag-1">xxx-xxx-xx</span><span
-				class="tag-2">欢迎您，${user.getUsername()} <a href="home-page">&nbsp; &nbsp;退出</a></span>
+				class="tag-2">欢迎您，${user.getUsername()} <a href="home-page">&nbsp;
+					&nbsp;退出</a></span>
 		</div>
-	        <div class="header">
-            <img src="images/logo.png"> 宜人贷理财账户管理系统
-        </div>
-        <div class="home">
-            <a href="myAccount">返回我的账户首页</a>
-        </div>
-        <div class="left-menu">
-            <div class="infor">
-                <div class="menu">
-                    <a href="user-info">基本信息</a>
-                </div>
-                <div class="menu">
-                    <a href="rechargeAndWithdrow">借款出借</a>
-                </div>
-                <div class="menu">
-                    <a href="payment">支付单</a>
-                </div>
-                <div class="menu">
-                    <a href="fund-flow">资金流水</a>
-                </div>
-                <div class="menu">
-                    <a href="risk-investment-analyse">投资风险等级测评</a>
-                </div>
-                <div class="menu">
-                    <a href="changePassword">修改密码</a>
-                </div>
-            </div>
-        </div>
-    </div>
+		<div class="header">
+			<img src="images/logo.png"> 宜人贷理财账户管理系统
+		</div>
+		<div class="home">
+			<a href="myAccount">返回我的账户首页</a>
+		</div>
+		<div class="left-menu">
+			<div class="infor">
+				<div class="menu">
+					<a href="user-info">基本信息</a>
+				</div>
+				<div class="menu">
+					<a href="rechargeAndWithdrow">借款出借</a>
+				</div>
+				<div class="menu">
+					<a href="payment">支付单</a>
+				</div>
+				<div class="menu">
+					<a href="fund-flow">资金流水</a>
+				</div>
+				<div class="menu">
+					<a href="risk-investment-analyse">投资风险等级测评</a>
+				</div>
+				<div class="menu">
+					<a href="changePassword">修改密码</a>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="uptitle">
 		<h1>修改您的账户信息</h1>
 	</div>
@@ -185,7 +186,11 @@ div a {
 					<td><input name="user.address" type="text"
 						value="${user.address }" /></td>
 				</tr>
-
+				<tr>
+					<td>余额:</td>
+					<td><input name="user.balance" type="text" readonly="readonly"
+						value="${user.balance }" /></td>
+				</tr>
 				<tr>
 					<td colspan="2" class="save">
 						<button onclick="javascript:history.back(-1)">返回</button> <input
