@@ -32,7 +32,7 @@
 					<a href="user-info">基本信息</a>
 				</div>
 				<div class="menu">
-					<a href="rechargeAndWithdrow">充值提现</a>
+					<a href="rechargeAndWithdrow">借贷出借</a>
 				</div>
 				<div class="menu">
 					<a href="payment">支付单</a>
