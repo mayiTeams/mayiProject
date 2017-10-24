@@ -47,6 +47,7 @@
 		</div>
 	</div>
 	<div class="right">
+	
 		        <form onsubmit=" return myFunction()">
             <div class="user">
                 <label>请&nbsp;&nbsp;输&nbsp;&nbsp;入&nbsp;&nbsp;账&nbsp;&nbsp;号:</label>
@@ -74,11 +75,14 @@
             </div>
             <hr>
             <div class="user">
+            
                 <a href="#">支付详情</a>
                 <input type="submit" name="" value="提交" class="user_button">
                 <input type="reset" name="" value="重置" class="user_button">
+            
             </div>
         </form>
+       
     </div>
 </body>
 <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>

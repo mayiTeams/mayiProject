@@ -149,6 +149,11 @@ public class UserAction {
 		}
 	}
 	
+	/**
+	 * 支付单
+	 * @return
+	 */
+	
 	public String payment(){
 		int inexistence = userServerImpl.payment(user);
 		if(inexistence < 0){
@@ -166,4 +171,11 @@ public class UserAction {
 		return "lists";
 	}
 	
+	/**
+	 * 支付单详情
+	 */
+	public String info(){
+		user = userServerImpl.getUser1(user);
+		return "info";
+	}
 }
