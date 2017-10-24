@@ -58,7 +58,7 @@ public class UserAction {
 	public String skip() {
 		return "succeed";
 	}
-
+   
 	public String login() {
 		String val = userServerImpl.login(user);
 		if (val.equals("true")) {
@@ -68,7 +68,14 @@ public class UserAction {
 		}
 		return "false";
 	}
-
+   /**
+    * 查询当前用户信息
+    */
+	public String getUserinfor(){
+		user = userServerImpl.getUser(user);
+		return "succeed";
+	}
+	
 	/**
 	 * 充值
 	 * 

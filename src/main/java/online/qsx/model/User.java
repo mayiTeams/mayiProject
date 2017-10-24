@@ -25,10 +25,18 @@ public class User {
 	private short sex;
 	private Date date;
 	private String remark;
-	
+	private Double paymentMoney;
 
 	public Date getDate() {
 		return date;
+	}
+
+	public Double getPaymentMoney() {
+		return paymentMoney;
+	}
+
+	public void setPaymentMoney(Double paymentMoney) {
+		this.paymentMoney = paymentMoney;
 	}
 
 	public void setDate(Date date) {
@@ -116,8 +124,10 @@ public class User {
 		this.balance = balance;
 	}
 
+
+
 	public User(Long id, String username, String password, String balance, String email, String phone, String address,
-			short sex, Date date, String remark) {
+			short sex, Date date, String remark, Double paymentMoney) {
 		super();
 		this.id = id;
 		this.username = username;
@@ -129,6 +139,7 @@ public class User {
 		this.sex = sex;
 		this.date = date;
 		this.remark = remark;
+		this.paymentMoney = paymentMoney;
 	}
 
 	public User(Long id, String username, String password, String balance, short sex) {
@@ -156,7 +167,7 @@ public class User {
 	}
 
 	public User(String username, String password, String balance, String email, String phone, String address, short sex,
-			Date date, String remark) {
+			Date date, String remark, Double paymentMoney) {
 		super();
 		this.username = username;
 		this.password = password;
@@ -167,6 +178,7 @@ public class User {
 		this.sex = sex;
 		this.date = date;
 		this.remark = remark;
+		this.paymentMoney = paymentMoney;
 	}
 
 	public User(Long id) {
@@ -183,9 +195,6 @@ public class User {
 		this.id = id;
 		this.balance = balance;
 	}
-	
-
-	
 
 	
 	@Override

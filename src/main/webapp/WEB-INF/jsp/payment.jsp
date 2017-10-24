@@ -29,7 +29,7 @@
 					<a href="user-info">基本信息</a>
 				</div>
 				<div class="menu">
-					<a href="rechargeAndWithdrow">充值提现</a>
+					<a href="rechargeAndWithdrow">借贷出借</a>
 				</div>
 				<div class="menu">
 					<a href="payment">支付单</a>
@@ -55,7 +55,7 @@
             <hr>
             <div class="user">
                 <label>转&nbsp;&nbsp;&nbsp;&nbsp;账&nbsp;&nbsp;&nbsp;&nbsp;金&nbsp;&nbsp;&nbsp;&nbsp;额:</label>
-                <input id="money" type="text" name="" placeholder="请输入转账金额！">
+                <input id="money" type="text" name="user.paymentMoney" placeholder="请输入转账金额！">
             </div>
             <hr>
             <div class="user">
@@ -74,6 +74,7 @@
             </div>
             <hr>
             <div class="user">
+                <a href="#">支付详情</a>
                 <input type="submit" name="" value="提交" class="user_button">
                 <input type="reset" name="" value="重置" class="user_button">
             </div>
