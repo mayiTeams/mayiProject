@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import online.qsx.dao.impl.UserDaoImpl;
+import online.qsx.model.Log;
 import online.qsx.model.User;
 
 @Service
@@ -168,11 +169,31 @@ public class UserServerImpl {
 		// 对list进行遍历
 		for (User us : list) {
 			if (us.getUsername().trim().equals(user.getUsername()) && us.getPassword().trim().equals(user.getPassword())) {
-				userDaoImpl.payment(user);
+				Double getBalance = Double.parseDouble(user.getBalance());
+				System.err.println("提交金额为：" + getBalance);
+				Double allBalance = Double.parseDouble(us.getBalance());
+				System.err.println("账户金额：" + allBalance);
+				while(allBalance > getBalance){
+					Double allBalance01 = allBalance - getBalance;
+		            System.out.println(allBalance01);	            
+		            userDaoImpl.payment(user);
+		            break;
+				}
+				break;
 			} else {
 				System.out.println("用户不存在！");
+				break;
 			}
+			
 		}
 		return 0;
+	}
+	
+	/**
+	 * @param log
+	 * @return
+	 */
+	public List<Log> foundLog(Log log) {
+		return userDaoImpl.getLogs();
 	}
 }

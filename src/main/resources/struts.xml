@@ -12,7 +12,6 @@
 		<action name="goRegister" class="userAction" method="skip">
 			<result name="succeed">/WEB-INF/jsp/register.jsp</result>
 		</action>
-
 		<action name="login" class="userAction" method="login">
 			<result name="succeed">/WEB-INF/jsp/home.jsp</result>
 			<result name="false">/WEB-INF/jsp/login.jsp</result>
@@ -35,8 +34,6 @@
 		<action name="withdrowMoney" class="userAction" method="withdrow">
 			<result name="succeed">/WEB-INF/jsp/home.jsp</result>
 		</action>
-
-
 		<action name="changePassword" class="userAction" method="none">
 			<result name="succeed">/WEB-INF/jsp/changePassword.jsp</result>
         </action>
@@ -44,16 +41,9 @@
 			<result name="succeed">/WEB-INF/jsp/changePassword.jsp</result>
         </action>
 
-
-
-		<action name="user-info" class="userAction" method="none">
+		<action name="user-info" class="userAction" method="getUserinfor">
 			<result name="succeed">/WEB-INF/jsp/user-info.jsp</result>
 		</action>
-
-		
-		
-
-
 
 		<action name="update" class="userAction" method="none">
 			<result name="succeed">/WEB-INF/jsp/update.jsp</result>
@@ -66,7 +56,6 @@
 		<action name="list" class="userAction" method="none">
 			<result name="succeed">/WEB-INF/jsp/list.jsp</result>
 		</action>
-
 
 		<action name="risk-investment-analyse" class="userAction"
 			method="none">
@@ -89,19 +78,14 @@
 			<result name="succeed">/WEB-INF/jsp/payment.jsp</result>
 			<result name="flase">/WEB-INF/jsp/paymentFalse.jsp</result>
 		</action>
-		
 
 		<!-- 退出账户首页 -->
 		<action name="home-page" class="userAction" method="none">
 			<result name="succeed">main.jsp</result>
 		</action>
 		
-		<!-- 页面跳转 -->
-		<action name="payment" class="userAction" method="none">
-			<result name="succeed">/WEB-INF/jsp/payment.jsp</result>
-		</action>
-		<action name="fund-flow" class="userAction" method="none">
-			<result name="succeed">/WEB-INF/jsp/fund-flow.jsp</result>
+		<action name="fund-flow" class="userAction" method="foundLog">
+			<result name="lists">/WEB-INF/jsp/fund-flow.jsp</result>
 		</action>
 		<action name="changePassword" class="userAction" method="none">
 			<result name="succeed">/WEB-INF/jsp/changePassword.jsp</result>

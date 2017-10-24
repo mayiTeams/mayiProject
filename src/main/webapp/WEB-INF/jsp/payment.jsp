@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
 	<div>
 		<div class="tag">
 			<img id="img-1" src="images/1.png" alt=""><a href="">宜信官网</a> <img
@@ -22,7 +21,7 @@
 			<img src="images/logo.png"> 宜人贷理财账户管理系统
 		</div>
 		<div class="home">
-			<a href="myAccount">返回我的账户首页</a></span>
+			<a href="myAccount">返回我的账户首页</a>
 		</div>
 		<div class="left-menu">
 			<div class="infor">
@@ -30,7 +29,7 @@
 					<a href="user-info">基本信息</a>
 				</div>
 				<div class="menu">
-					<a href="rechargeAndWithdrow">充值提现</a>
+					<a href="rechargeAndWithdrow">借贷出借</a>
 				</div>
 				<div class="menu">
 					<a href="payment">支付单</a>
@@ -48,40 +47,39 @@
 		</div>
 	</div>
 	<div class="right">
-
-		<form>
-		
-				<div class="user">
-					<label>请输入对方用户名:</label> <input type="text" name=""
-						placeholder="例如输入张三">
-				</div>
-				<hr>
-				<div class="user">
-					<label>转&nbsp;&nbsp;&nbsp;&nbsp;账&nbsp;&nbsp;&nbsp;&nbsp;金&nbsp;&nbsp;&nbsp;&nbsp;额:&nbsp;&nbsp;</label>
-					<input type="text" name="" placeholder="例如输入“5000”">
-				</div>
-				<hr>
-				<div class="user">
-					<label>付&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;款&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</label>
-					<input type="text" name="">
-				</div>
-				<hr>
-				<div class="user">
-					<label>付&nbsp;&nbsp;&nbsp;&nbsp;款&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;期：</label>
-					<input type="text" name="">
-				</div>
-				<hr>
-				<div class="user">
-					<label>备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注:&nbsp;&nbsp;</label>
-					<input type="text" name="" placeholder="描述账单信息">
-				</div>
-				<hr>
-				<div class="user">
-					<input type="submit" name="" value="提交" class="user_button">
-					<input type="reset" name="" value="重置" class="user_button">
-				</div>
-			</form>
-	</div>
+		        <form onsubmit=" return myFunction()">
+            <div class="user">
+                <label>请&nbsp;&nbsp;输&nbsp;&nbsp;入&nbsp;&nbsp;账&nbsp;&nbsp;号:</label>
+                <input id="name" type="text" name="user.username" placeholder="请输入对方账号！">
+            </div>
+            <hr>
+            <div class="user">
+                <label>转&nbsp;&nbsp;&nbsp;&nbsp;账&nbsp;&nbsp;&nbsp;&nbsp;金&nbsp;&nbsp;&nbsp;&nbsp;额:</label>
+                <input id="money" type="text" name="user.paymentMoney" placeholder="请输入转账金额！">
+            </div>
+            <hr>
+            <div class="user">
+                <label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+                <input id="password" type="password" name="user.password" placeholder="请输入支付密码！">
+            </div>
+            <hr>
+            <div class="user">
+                <label>付&nbsp;&nbsp;&nbsp;款&nbsp;&nbsp;&nbsp;日&nbsp;&nbsp;&nbsp;期：</label>
+                <input id="date" type="text" name="user.date">
+            </div>
+            <hr>
+            <div class="user">
+                <label>备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注:&nbsp;&nbsp;</label>
+                <input id="remark" type="text" name="user.remark" placeholder="描述账单信息">
+            </div>
+            <hr>
+            <div class="user">
+                <a href="#">支付详情</a>
+                <input type="submit" name="" value="提交" class="user_button">
+                <input type="reset" name="" value="重置" class="user_button">
+            </div>
+        </form>
+    </div>
 </body>
 <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript">
@@ -109,7 +107,6 @@
 		} else {
 			alert("支付成功！");
 		}
-
 	}
 </script>
 

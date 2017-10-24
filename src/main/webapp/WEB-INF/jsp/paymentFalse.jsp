@@ -21,7 +21,7 @@
 			<img src="images/logo.png"> 宜人贷理财账户管理系统
 		</div>
 		<div class="home">
-			<a href="myAccount">返回我的账户首页</a></span>
+			<a href="myAccount">返回我的账户首页</a>
 		</div>
 		<div class="left-menu">
 			<div class="infor">
@@ -49,28 +49,28 @@
 	<div class="right">
 		<form onsubmit=" return myFunction()" method="post" action="payment">
 			<div class="user">
-				<br> <span class="false">你输入的用户名不存在，请重新输入！</span> <label>请&nbsp;&nbsp;输&nbsp;&nbsp;入&nbsp;&nbsp;账&nbsp;&nbsp;号:</label>
-				<input id="name" type="text" name="" placeholder="请输入对方账号！">
+				<label>请&nbsp;&nbsp;输&nbsp;&nbsp;入&nbsp;&nbsp;账&nbsp;&nbsp;号:</label>
+				<input id="name" type="text" name="user.username" placeholder="用户不存在！请核对信息！">
 			</div>
 			<hr>
 			<div class="user">
 				<label>转&nbsp;&nbsp;&nbsp;&nbsp;账&nbsp;&nbsp;&nbsp;&nbsp;金&nbsp;&nbsp;&nbsp;&nbsp;额:</label>
-				<input id="money" type="text" name="" placeholder="请输入转账金额！">
+				<input id="money" type="text" name="user." placeholder="请输入转账金额！">
 			</div>
 			<hr>
 			<div class="user">
 				<label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
-				<input id="password" type="password" name="" placeholder="请输入支付密码！">
+				<input id="password" type="password" name="user.password" placeholder="请输入支付密码！">
 			</div>
 			<hr>
 			<div class="user">
 				<label>付&nbsp;&nbsp;&nbsp;款&nbsp;&nbsp;&nbsp;日&nbsp;&nbsp;&nbsp;期：</label>
-				<input id="date" type="text" name="">
+				<input id="date" type="text" name="user.date">
 			</div>
 			<hr>
 			<div class="user">
 				<label>备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注:&nbsp;&nbsp;</label>
-				<input id="remark" type="text" name="" placeholder="描述账单信息">
+				<input id="remark" type="text" name="user.remark" placeholder="描述账单信息">
 			</div>
 			<hr>
 			<div class="user">

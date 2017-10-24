@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import online.qsx.common.BaseDao;
+import online.qsx.model.Log;
 import online.qsx.model.User;
 
 @Repository
@@ -60,13 +61,19 @@ public class UserDaoImpl {
 		baseDao.getHibernateTemplate().save(user);
 	}
 
-
-	
 	/**
 	 * 支付单
 	 */
 	public void payment(User user) {
 		baseDao.getHibernateTemplate().save(user);
+	}
+
+	/**
+	 * @return
+	 */
+	@SuppressWarnings("unchecked")
+	public List<Log> getLogs() {
+		return (List<Log>) baseDao.getHibernateTemplate().find("from Log");
 	}
 
 }
