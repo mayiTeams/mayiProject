@@ -3,6 +3,8 @@ package online.qsx.action;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import online.qsx.model.Log;
 import online.qsx.model.User;
 import online.qsx.server.impl.UserServerImpl;
 
@@ -13,6 +15,25 @@ public class UserAction {
 	private List<User> list;
 
 	private User user;
+	
+	private List<Log> lists;
+	private Log log;
+	
+	public List<Log> getLists() {
+		return lists;
+	}
+
+	public void setLists(List<Log> lists) {
+		this.lists = lists;
+	}
+
+	public Log getLog() {
+		return log;
+	}
+
+	public void setLog(Log log) {
+		this.log = log;
+	}
 
 	public List<User> getList() {
 		return list;
@@ -135,6 +156,14 @@ public class UserAction {
 		}else{
 			return "succeed";
 		}
+	}
+	/**
+	 * 查找所有日志
+	 * @return
+	 */
+	public String foundLog() {
+		lists=userServerImpl.foundLog(log);
+		return "lists";
 	}
 	
 }

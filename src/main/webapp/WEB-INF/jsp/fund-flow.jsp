@@ -174,60 +174,31 @@ div a {
 		<div class="right-info">
 			<div class="table">
 				<div>
-					<p>
-						<big>当前余额：xxxxx</big>
-					</p>
+					<p>当前余额：${user.getBalance()}元</p>
 				</div>
 				<div>
-					<big style="margin-left: 35px">合计：&nbsp;&nbsp;</big> <span>总收入:xxxxxx&nbsp;&nbsp;</span><span>总支出:xxxx</span>
+					<span style="margin-left: 35px">合计：&nbsp;&nbsp;</span> <span>总收入:xxxxxx&nbsp;&nbsp;</span><span>总支出:xxxx</span>
 					<br> <br> <br>
 				</div>
 				<table width="60%" border="1" cellpadding="0" cellspacing="0">
 					<tr class="to">
 						<th>序号</th>
 						<th>业务日期</th>
-						<th>交易对象</th>
 						<th>交易项目</th>
 						<th>收入(元)</th>
 						<th>支出(元)</th>
-						<th>余额(元)</th>
 					</tr>
-					<tr>
-						<td>001</td>
-						<td>2017.10.17</td>
-						<td>宜信</td>
-						<td>存款</td>
-						<td>+6000.00</td>
-						<td>+0.00</td>
-						<td>6000.00</td>
-					</tr>
-					<tr class="colm">
-						<td>002</td>
-						<td>2017.10.17</td>
-						<td>张三</td>
-						<td>借款</td>
-						<td>+3000.00</td>
-						<td>+0.00</td>
-						<td>9000.00</td>
-					</tr>
-					<tr>
-						<td>003</td>
-						<td>2017.10.17</td>
-						<td>张三</td>
-						<td>借款</td>
-						<td>+3000.00</td>
-						<td>+0.00</td>
-						<td>12000.00</td>
-					</tr>
-					<tr class="colm">
-						<td>004</td>
-						<td>2017.10.17</td>
-						<td>用户</td>
-						<td>提现</td>
-						<td>+0.00</td>
-						<td>-3000.00</td>
-						<td>9000.00</td>
-					</tr>
+					<c:forEach items="${lists}" var="temp">
+						<tr>
+							<td>${temp.id}</td>
+							<td>${temp.createdate}</td>
+							<td>${temp.project}</td>
+							<td>${temp.income}</td>
+							<td>${temp.outcome}</td>
+						</tr>
+					</c:forEach>
+				
+
 				</table>
 			</div>
 		</div>

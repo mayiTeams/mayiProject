@@ -84,8 +84,8 @@
 			<result name="succeed">main.jsp</result>
 		</action>
 		
-		<action name="fund-flow" class="userAction" method="none">
-			<result name="succeed">/WEB-INF/jsp/fund-flow.jsp</result>
+		<action name="fund-flow" class="userAction" method="foundLog">
+			<result name="lists">/WEB-INF/jsp/fund-flow.jsp</result>
 		</action>
 		<action name="changePassword" class="userAction" method="none">
 			<result name="succeed">/WEB-INF/jsp/changePassword.jsp</result>
