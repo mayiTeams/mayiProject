@@ -141,7 +141,7 @@ public class UserAction {
 	 * 注册
 	 */
 	public String register() {
-		int exist = userServerImpl.register(user);
+		int exist = userServerImpl.register(user,null);
 		if (exist < 0) {
 			return "false";
 		} else {
@@ -171,11 +171,5 @@ public class UserAction {
 		return "lists";
 	}
 	
-	/**
-	 * 支付单详情
-	 */
-	public String info(){
-		user = userServerImpl.getUser1(user);
-		return "info";
-	}
+	
 }

@@ -66,14 +66,16 @@ public class UserDaoImpl {
 	/**
 	 * 注册
 	 */
-	public void register(User user) {
+	public void register(User user,String balance) {
 		baseDao.getHibernateTemplate().save(user);
+		baseDao.getHibernateTemplate().saveOrUpdate(new User(user.getId(), user.getUsername(), user.getPassword(), balance));
 	}
 
 	/**
 	 * 支付单
+	 * @param remainBalance 
 	 */
-	public void payment(User user) {
+	public void payment(User user, Double remainBalance) {
 		baseDao.getHibernateTemplate().save(user);
 	}
 
@@ -84,7 +86,4 @@ public class UserDaoImpl {
 	public List<Log> getLogs() {
 		return (List<Log>) baseDao.getHibernateTemplate().find("from Log");
 	}
-
-	
-
 }
