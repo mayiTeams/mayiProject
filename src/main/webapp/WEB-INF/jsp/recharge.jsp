@@ -30,7 +30,7 @@
 						<a href="user-info">基本信息</a>
 					</div>
 					<div class="menu">
-						<a href="rechargeAndWithdrow">充值提现</a>
+						<a href="rechargeAndWithdrow">借贷出借</a>
 					</div>
 					<div class="menu">
 						<a href="payment">支付单</a>
@@ -52,6 +52,13 @@
 				<div class="right-infor">
 					                    <div class="inp">请输入借贷金额：
                         <input id="in" name="user.balance" class="inputsize" type="text"> 元
+                          <div style="margin-top: 20px">请选择借款期限：
+                            <select name="" id="">
+                                <option value="">1个月</option>
+                                <option value="">3个月</option>
+                                <option value="">6个月</option>
+                                <option value="">9个月</option>
+                            </select></div>
                         <div style="margin-top: 20px">
                             <button type="submit">确认</button>
                         </div>
@@ -65,10 +72,10 @@
     function myFunction() {
         var infor = $('#in').val();
         if (infor >0 &&infor<=2000) {
-            alert("充值成功！");
+            alert("借贷成功！");
             return true;
         }else {
-            alert("充值失败，您的最大借贷金额为2000元！")
+            alert("借贷失败，您的最大借贷金额为2000元！")
            return false;
         }
     }

@@ -175,7 +175,7 @@ public class UserAction {
 	 * 支付单详情
 	 */
 	public String info(){
-		user = userServerImpl.getUser1(user);
+		user = userServerImpl.getUser(user);
 		return "info";
 	}
 }

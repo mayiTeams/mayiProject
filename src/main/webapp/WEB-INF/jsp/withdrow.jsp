@@ -30,7 +30,7 @@
 						<a href="user-info">基本信息</a>
 					</div>
 					<div class="menu">
-						<a href="rechargeAndWithdrow">充值提现</a>
+						<a href="rechargeAndWithdrow">借贷出借</a>
 					</div>
 					<div class="menu">
 						<a href="payment">支付单</a>
@@ -68,7 +68,7 @@
 			var infor = $('#in').val();
 			var balance = ${user.getBalance()};
 			if (infor > 0 && infor < balance) {
-				alert("提现成功！");
+				alert("出借成功！");
 				return true;
 			} else {
 				alert("余额不足！")
