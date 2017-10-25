@@ -148,18 +148,17 @@ public class UserServerImpl {
 	 * 
 	 * @return
 	 */
-	public int register(User user) {
+	public int register(User user,String balance) {
 		List<User> list = userDaoImpl.getUsers();
 		for (User us : list) {
 			if (us.getUsername().trim().equals(user.getUsername())) {
 				System.out.println("用户已存在！");
 				return -1;
 			} else {
-				userDaoImpl.register(user);
+				userDaoImpl.register(user,balance);
 			}
 		}
 		return 0;
-
 	}
 
 	/**
@@ -171,22 +170,25 @@ public class UserServerImpl {
 		// 对list进行遍历
 		for (User us : list) {
 			if (us.getUsername().trim().equals(user.getUsername()) && us.getPassword().trim().equals(user.getPassword())) {
-				Double getBalance = Double.parseDouble(user.getBalance());
-				System.err.println("提交金额为：" + getBalance);
+				Double paymentMoneyone = Double.parseDouble(user.getBalance());
+				System.err.println("转账金额为：" + user.getBalance());
+				System.err.println(user.getBalance());
+				System.out.println(us.getBalance());
+				System.out.println(user.getUsername());
 				Double allBalance = Double.parseDouble(us.getBalance());
 				System.err.println("账户金额：" + allBalance);
-				while(allBalance > getBalance){
-					Double allBalance01 = allBalance - getBalance;
-		            System.out.println(allBalance01);	            
-		            userDaoImpl.payment(user);
+				while(allBalance >= paymentMoneyone){
+					Double remainBalance = allBalance - paymentMoneyone;
+		            System.out.println(remainBalance);
+		            String allBalance01 = Double.toString(remainBalance);
+		            userDaoImpl.payment(user,remainBalance);
 		            break;
 				}
 				break;
 			} else {
 				System.out.println("用户不存在！");
 				break;
-			}
-			
+			}	
 		}
 		return 0;
 	}
