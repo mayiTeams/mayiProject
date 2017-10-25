@@ -171,5 +171,13 @@ public class UserAction {
 		return "lists";
 	}
 	
-	
+
+	/**
+	 * 支付单详情
+	 */
+	public String info(){
+		user = userServerImpl.getUser(user);
+		return "info";
+	}
+
 }
