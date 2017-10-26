@@ -34,25 +34,26 @@ public class UserDaoImpl {
 	public User getUser(User user) {
 		return baseDao.getHibernateTemplate().get(User.class, user.getId());
 	}
-	
 
-	public void updateBalance(User user,String balance) {
-		baseDao.getHibernateTemplate().saveOrUpdate(new User(user.getId(), user.getUsername(), user.getPassword(), balance));
-		
+	public void updateBalance(User user, String balance) {
+		baseDao.getHibernateTemplate()
+				.saveOrUpdate(new User(user.getId(), user.getUsername(), user.getPassword(), balance));
+
 	}
 
 	public void saveLog1(User user, Double getBalance, Double accoutnBalnce, String allBalance01) {
-		baseDao.getHibernateTemplate().save(new Log(new Date(),"借入",getBalance,0D,allBalance01));
+		baseDao.getHibernateTemplate().save(new Log(new Date(), "借入", getBalance, 0D, allBalance01));
 	}
-	
+
 	public void saveLog2(User user, Double getBalance, Double accoutnBalnce, String allBalance01) {
-		baseDao.getHibernateTemplate().save(new Log(new Date(),"借出",0D,getBalance,allBalance01));
+		baseDao.getHibernateTemplate().save(new Log(new Date(), "借出", 0D, getBalance, allBalance01));
 	}
 
 	public void passWord(User user) {
-		//带id修改 不带只是保存
-		baseDao.getHibernateTemplate().saveOrUpdate(new User(user.getId(), user.getUsername(), user.getPassword(),user.getBalance()));
-		
+		// 带id修改 不带只是保存
+		baseDao.getHibernateTemplate()
+				.saveOrUpdate(new User(user.getId(), user.getUsername(), user.getPassword(), user.getBalance()));
+
 	}
 
 	public void edit(User user) {
@@ -66,14 +67,14 @@ public class UserDaoImpl {
 	/**
 	 * 注册
 	 */
-	public void register(User user,String balance) {
+	public void register(User user) {
 		baseDao.getHibernateTemplate().save(user);
-		baseDao.getHibernateTemplate().saveOrUpdate(new User(user.getId(), user.getUsername(), user.getPassword(), balance));
 	}
 
 	/**
 	 * 支付单
-	 * @param remainBalance 
+	 * 
+	 * @param remainBalance
 	 */
 	public void payment(User user, Double remainBalance) {
 		baseDao.getHibernateTemplate().save(user);

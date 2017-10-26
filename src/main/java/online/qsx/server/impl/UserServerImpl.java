@@ -97,7 +97,7 @@ public class UserServerImpl {
 			userDaoImpl.updateBalance(user, allBalance01);
 			userDaoImpl.saveLog2(user, getBalance, accoutnBalnce, allBalance01);
 		} else {
-			userDaoImpl.updateBalance(user,balance);
+			userDaoImpl.updateBalance(user, balance);
 		}
 
 	}
@@ -129,14 +129,15 @@ public class UserServerImpl {
 		}
 		return null;
 	}
+
 	/**
 	 * 修改密码
 	 */
 
 	public void passWord(User user) {
-		
+
 		userDaoImpl.passWord(user);
-		
+
 	}
 
 	public void edit(User user) {
@@ -148,14 +149,14 @@ public class UserServerImpl {
 	 * 
 	 * @return
 	 */
-	public int register(User user,String balance) {
+	public int register(User user) {
 		List<User> list = userDaoImpl.getUsers();
 		for (User us : list) {
 			if (us.getUsername().trim().equals(user.getUsername())) {
 				System.out.println("用户已存在！");
 				return -1;
 			} else {
-				userDaoImpl.register(user,balance);
+				userDaoImpl.register(user);
 			}
 		}
 		return 0;
@@ -169,7 +170,8 @@ public class UserServerImpl {
 		List<User> list = userDaoImpl.getUsers();
 		// 对list进行遍历
 		for (User us : list) {
-			if (us.getUsername().trim().equals(user.getUsername()) && us.getPassword().trim().equals(user.getPassword())) {
+			if (us.getUsername().trim().equals(user.getUsername())
+					&& us.getPassword().trim().equals(user.getPassword())) {
 				Double paymentMoneyone = Double.parseDouble(user.getBalance());
 				System.err.println("转账金额为：" + user.getBalance());
 				System.err.println(user.getBalance());
@@ -177,22 +179,22 @@ public class UserServerImpl {
 				System.out.println(user.getUsername());
 				Double allBalance = Double.parseDouble(us.getBalance());
 				System.err.println("账户金额：" + allBalance);
-				while(allBalance >= paymentMoneyone){
+				while (allBalance >= paymentMoneyone) {
 					Double remainBalance = allBalance - paymentMoneyone;
-		            System.out.println(remainBalance);
-		            String allBalance01 = Double.toString(remainBalance);
-		            userDaoImpl.payment(user,remainBalance);
-		            break;
+					System.out.println(remainBalance);
+					String allBalance01 = Double.toString(remainBalance);
+					userDaoImpl.payment(user, remainBalance);
+					break;
 				}
 				break;
 			} else {
 				System.out.println("用户不存在！");
 				break;
-			}	
+			}
 		}
 		return 0;
 	}
-	
+
 	/**
 	 * @param log
 	 * @return

@@ -141,7 +141,7 @@ public class UserAction {
 	 * 注册
 	 */
 	public String register() {
-		int exist = userServerImpl.register(user,null);
+		int exist = userServerImpl.register(user);
 		if (exist < 0) {
 			return "false";
 		} else {

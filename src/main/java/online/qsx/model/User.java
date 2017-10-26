@@ -25,6 +25,7 @@ public class User {
 	private Long id;
 	private String username;
 	private String password;
+	@Column(columnDefinition = "varchar(250)default 0")
 	private String balance;
 	private String email;
 	private String phone;
@@ -101,7 +102,7 @@ public class User {
 	public String getBalance() {
 		return balance;
 	}
-	
+
 	public void setBalance(String balance) {
 		this.balance = balance;
 	}
